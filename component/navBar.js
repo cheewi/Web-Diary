@@ -7,7 +7,7 @@ class NavBar extends HTMLElement {
         this.innerHTML = `
             <nav class="nav-container">
                 <div class="nav-inner-container">
-                    <div class="left-container">
+                    <div class="nav-left-container">
                         <div class="logo-container">
                             <h2 class="logo-heading">DIARY</h2>
                             <p class="logo-sub-heading">
@@ -18,7 +18,7 @@ class NavBar extends HTMLElement {
                             </p>
                         </div>
                     </div>
-                    <div class="right-container">
+                    <div class="nav-right-container">
                         <a href="#" class="about">ABOUT</a>
                     </div>
                 </div>

@@ -30,7 +30,7 @@
     color: #2C2C2C;
 }
 
-.right-container { 
+.nav-right-container { 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,6 +50,13 @@
     color: #9747FF;
 }
 
+.nav-inner-container { 
+    margin: 0;
+    width: 90%;
+}
+
+/* RESPONSIVE FOR MOBILE */
+
 @media (max-width : 390px) { 
     .nav-container { 
         margin-top: 10px;
@@ -65,12 +72,9 @@
     .about { 
     font-size: 11px;
     }
-    .nav-inner-container { 
-        margin-left: 20px;
-        margin-right: 20px;
-    }
 }
 
+/* RESPONSIVE FOR TABLET */
 @media (min-width : 391px) and (max-width : 1024px) { 
     .nav-container { 
         margin-top: 20px;
@@ -85,12 +89,9 @@
     .about { 
         font-size: 14px;
     }
-    .nav-inner-container { 
-        margin-left: 40px;
-        margin-right: 40px;
-    }
 }
 
+/* RESPONSIVE FOR LAPTOP-DESKTOP */
 @media (min-width : 1025px) { 
     .nav-container { 
         margin-top: 20px;
@@ -104,9 +105,5 @@
     }
     .about { 
         font-size: 16px;
-    }
-    .nav-inner-container { 
-        margin-left: 90px;
-        margin-right: 90px;
     }
 }

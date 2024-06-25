@@ -5,13 +5,25 @@ body {
     padding: 0;
 }
 
-a:hover, a:active {
-    color: white;
-}
 
 /* HERO SECTION */
 
+.container { 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.start-link { 
+    text-decoration: none;
+}
+
+.start-link:hover, .start-link:active {
+    color: white;
+}
+
 .start-button { 
+    font-family: Montserrat;
     border-radius: 6px;
     border: 2px solid #9747FF;
     color: #9747FF;
@@ -25,20 +37,15 @@ a:hover, a:active {
 .start-button:hover { 
     background-color: #9370DB;
     color: white;
-    box-shadow: 0 15px 25px rgba(151, 71, 255, 0.6);
+    box-shadow: 0 15px 25px rgba(151, 71, 255, 0.5);
     transform: translateY(-3px);
 }
 
 .start-button:active {
     color: white;
-    background-color: #5b2a8a;
+    background-color: #693996;
     box-shadow: 0 5px 10px rgba(151, 71, 255, 0.4);
     transform: translateY(1px);
-}
-
-.img-container { 
-    display: flex;
-    justify-content: center;
 }
 
 .img-inner-container > img { 
@@ -48,47 +55,50 @@ a:hover, a:active {
 
 .detail-container { 
     text-align: center;
-    margin-right: 12px;
-    margin-left: 12px;
 }
 
 .detail-heading { 
     font-family: RaleWay;
-    margin: 0;
     letter-spacing: 2px;
 }
 
 .detail-sub-heading { 
     font-family: Montserrat;
-    margin: 0;
 }
+
+.hero-container { 
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    flex-grow: 1;
+}
+
 .hero-inner-container { 
     display: flex;
 }
-.hero-container { 
-   display: flex;
-   justify-content: center;
-   margin-top: 40px;
+
+.heading-purple {
+    color: #9747FF;
 }
 
-.start-link { 
-    text-decoration: none;
+.detail-container { 
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 @media (max-width : 390px) { 
     .img-inner-container { 
-        max-width: 320px;
-        max-height: 320px;
-        min-height: 240px;
-        min-width: 240px;
+        max-width: 380px;
+        max-height: 380px;
     }
     .detail-heading { 
         font-size: 23px;
-        margin-bottom: 12px;
+        margin: 16px;
     }
     .detail-sub-heading { 
         font-size: 14px;
-        margin-bottom: 12px;
+        margin: 16px;
     }
     .start-button { 
         width: 100px;
@@ -96,11 +106,12 @@ a:hover, a:active {
         letter-spacing: 2px;
         font-size: 14px;
     }
-    .button-container { 
-        margin: 16px;
-    }
     .hero-inner-container { 
         flex-direction: column;
+    }
+    .img-inner-container { 
+        margin-left: 5px;
+        margin-right: 5px;
     }
 }
 
@@ -108,39 +119,46 @@ a:hover, a:active {
     .img-inner-container { 
         max-width: 720px;
         max-height: 720px;
-        min-height: 320px;
-        min-width: 320px;
     }
     .detail-heading { 
         font-size: 29px;
-        margin-bottom: 18px;
+        margin: 20px;
     }
     .detail-sub-heading { 
-        font-size: 18px;
-        margin-bottom: 18px;
+        font-size: 16px;
+        margin: 20px;
     }
     .start-button { 
-        width: 120px;
-        height: 48px;
+        width: 130px;
+        height: 50px;
         letter-spacing: 3px;
         font-size: 16px;
     }
     .button-container { 
-        margin: 24px;
+        margin: 18px;
     }
     .hero-inner-container { 
         flex-direction: column;
     }
+    .detail-container { 
+        max-width: 640px;
+    }
 }
 
 @media (min-width : 1025px) { 
+    .img-inner-container { 
+        min-width: 680px;
+        min-height: 680px;
+        max-width: 800px;
+        max-width: 800px;
+    }
     .detail-heading { 
         font-size: 32px;
-        margin-bottom: 18px;
+        margin: 20px;
     }
     .detail-sub-heading { 
-        font-size: 21px;
-        margin-bottom: 18px;
+        font-size: 18px;
+        margin: 20px;
     }
     .start-button { 
         width: 150px;
@@ -149,7 +167,7 @@ a:hover, a:active {
         font-size: 18px;
     }
     .button-container { 
-        margin: 26px;
+        margin: 20px;
     }
     .hero-inner-container { 
         flex-direction: row;
@@ -158,5 +176,12 @@ a:hover, a:active {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-width: 660px;
+    }
+    .img-inner-container { 
+        margin-top: 140px;
+    }
+    .hero-container { 
+        margin-top: 0;
     }
 }
