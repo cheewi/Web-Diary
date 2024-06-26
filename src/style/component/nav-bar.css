@@ -2,12 +2,13 @@
 .nav-container { 
     display: flex;
     justify-content: center;
+    margin-top: var(--m-7);
 }
 
 .nav-inner-container { 
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: var(--w-full);
 }
 
 .logo-container { 
@@ -17,17 +18,17 @@
 
 .logo-heading { 
     font-family: Raleway;
-    font-weight: 600;
-    margin: 0;
-    color: #2C2C2C;
-    letter-spacing: 3px;
+    font-weight: var(--fw-semibold);
+    margin: var(--m-0);
+    color: var(--primary-800);
+    letter-spacing: var(--spacing-md);
 }
 
 .logo-sub-heading {
     font-family: Montserrat;
-    font-weight: 400;
-    margin: 0;
-    color: #2C2C2C;
+    font-weight: var(--fw-normal);
+    margin: var(--m-0);
+    color: var(--primary-800);
 }
 
 .nav-right-container { 
@@ -35,75 +36,71 @@
     flex-direction: column;
     justify-content: center;
 }
+.nav-left-container { 
+    cursor: pointer;
+}
+
 .about { 
     font-family: Montserrat;
     text-decoration: none;
-    color: #2C2C2C;
-    font-weight: 400;
+    color: var(--primary-800);
+    font-weight: var(--fw-normal);
 }
 
 .about:hover { 
     text-decoration: underline;
-    font-weight: 500;
+    font-weight: var(--fw-medium);
 }
 .purple-sub-heading { 
-    color: #9747FF;
+    color: var(--secondary-400);
 }
 
 .nav-inner-container { 
-    margin: 0;
+    margin: var(--m-0);
     width: 90%;
 }
+
 
 /* RESPONSIVE FOR MOBILE */
 
 @media (max-width : 390px) { 
-    .nav-container { 
-        margin-top: 10px;
-    }
     .logo-heading { 
-        font-size: 23px;
-        letter-spacing:  2px;
+        font-size: var(--heding-sm);
+        letter-spacing:  var(--spacing-sm);
     }
     .logo-sub-heading { 
-        font-size: 11px;
-        margin-left: 20px;
+        font-size: var(--text-sm);
+        margin-left: var(--m-7);
     }
     .about { 
-    font-size: 11px;
+    font-size: var(--text-sm);
     }
 }
 
 /* RESPONSIVE FOR TABLET */
 @media (min-width : 391px) and (max-width : 1024px) { 
-    .nav-container { 
-        margin-top: 20px;
-    }
     .logo-heading { 
-        font-size: 27px;
+        font-size: var(--heading-md);
     }
     .logo-sub-heading { 
-        font-size: 14px;
-        margin-left: 22px;
+        font-size: var(--sub-heading-sm);
+        margin-left: var(--m-8);
     }
     .about { 
-        font-size: 14px;
+        font-size: var(--sub-heading-sm);
     }
 }
 
 /* RESPONSIVE FOR LAPTOP-DESKTOP */
 @media (min-width : 1025px) { 
-    .nav-container { 
-        margin-top: 20px;
-    }
     .logo-heading { 
-        font-size: 32px;
+        font-size: var(--heading-lg);
     }
     .logo-sub-heading { 
-        font-size: 16px;
-        margin-left: 24px;
+        font-size: var(--sub-heading-md);
+        margin-left: var(--m-9);
     }
     .about { 
-        font-size: 16px;
+        font-size: var(--sub-heading-md);
     }
 }

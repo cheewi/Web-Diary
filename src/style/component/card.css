@@ -1,0 +1,41 @@
+
+
+.diary-card-inner-container { 
+    max-width: 320px;
+    border: 2px solid #252527;
+    border-radius: 9px;
+    padding: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container { 
+    border-bottom: 1px solid #252527;
+    width: 90%;
+}
+
+#title { 
+    margin: 6px 0px;
+}
+
+.text-content-container { 
+    background-color: pink;
+    height: 60px;
+    width: 90%;
+}
+
+.card-footer-container { 
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    background-color: pink;
+    align-items: center;
+
+
+}
+
+.icon-container { 
+    display: flex;
+}

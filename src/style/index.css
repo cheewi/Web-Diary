@@ -1,8 +1,8 @@
 @import url(./components.css);
 
 body { 
-    margin: 0;
-    padding: 0;
+    margin: var(--m-0);
+    padding: var(--p-0);
 }
 
 
@@ -19,38 +19,38 @@ body {
 }
 
 .start-link:hover, .start-link:active {
-    color: white;
+    color: var(--pearl-white);
 }
 
 .start-button { 
     font-family: Montserrat;
     border-radius: 6px;
-    border: 2px solid #9747FF;
-    color: #9747FF;
-    background-color: white;
+    border: 2px solid var(--secondary-400);
+    color: var(--secondary-400);
+    background-color: var(--pearl-white);
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 15px rgba(151, 71, 255, 0.4);
-    font-weight: 600;
+    box-shadow: 0 8px 15px var(--secondary-800);
+    font-weight: var(--fw-semibold);
 }
 
 .start-button:hover { 
-    background-color: #9370DB;
+    background-color: var(--secondary-300);
     color: white;
-    box-shadow: 0 15px 25px rgba(151, 71, 255, 0.5);
+    box-shadow: 0 15px 25px var(--secondary-700);
     transform: translateY(-3px);
 }
 
 .start-button:active {
     color: white;
-    background-color: #693996;
-    box-shadow: 0 5px 10px rgba(151, 71, 255, 0.4);
+    background-color: var(--secondary-600);
+    box-shadow: 0 5px 10px var(--secondary-800);
     transform: translateY(1px);
 }
 
 .img-inner-container > img { 
-    width: 100%;
-    height: 100%;
+    width: var(--w-full);
+    height: var(--h-full);
 }
 
 .detail-container { 
@@ -59,7 +59,7 @@ body {
 
 .detail-heading { 
     font-family: RaleWay;
-    letter-spacing: 2px;
+    letter-spacing: var(--spacing-sm);
 }
 
 .detail-sub-heading { 
@@ -69,7 +69,7 @@ body {
 .hero-container { 
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: var(--m-12);
     flex-grow: 1;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .heading-purple {
-    color: #9747FF;
+    color: var(--secondary-400);
 }
 
 .detail-container { 
@@ -93,25 +93,25 @@ body {
         max-height: 380px;
     }
     .detail-heading { 
-        font-size: 23px;
-        margin: 16px;
+        font-size: var(--heading-sm);
+        margin: var(--m-5);
     }
     .detail-sub-heading { 
-        font-size: 14px;
-        margin: 16px;
+        font-size: var(--sub-heading-sm);
+        margin: var(--m-5);
     }
     .start-button { 
         width: 100px;
         height: 42px;
-        letter-spacing: 2px;
-        font-size: 14px;
+        letter-spacing: var(--spacing-sm);
+        font-size: var(--sub-heading-sm);
     }
     .hero-inner-container { 
         flex-direction: column;
     }
     .img-inner-container { 
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: var(--m-0-5);
+        margin-right: var(--m-0-5);
     }
 }
 
@@ -121,21 +121,21 @@ body {
         max-height: 720px;
     }
     .detail-heading { 
-        font-size: 29px;
-        margin: 20px;
+        font-size: var(--heading-base);
+        margin: var(--m-7);
     }
     .detail-sub-heading { 
-        font-size: 16px;
-        margin: 20px;
+        font-size: var(--sub-heading-md);
+        margin: var(--m-7);
     }
     .start-button { 
         width: 130px;
         height: 50px;
-        letter-spacing: 3px;
-        font-size: 16px;
+        letter-spacing: var(--spacing-md);
+        font-size: var(--sub-heading-md);
     }
     .button-container { 
-        margin: 18px;
+        margin: var(--m-6);
     }
     .hero-inner-container { 
         flex-direction: column;
@@ -150,24 +150,24 @@ body {
         min-width: 680px;
         min-height: 680px;
         max-width: 800px;
-        max-width: 800px;
+        max-height: 800px;
     }
     .detail-heading { 
-        font-size: 32px;
-        margin: 20px;
+        font-size: var(--heading-lg);
+        margin: var(--m-7);
     }
     .detail-sub-heading { 
-        font-size: 18px;
-        margin: 20px;
+        font-size: var(--sub-heading-lg);
+        margin: var(--m-7);
     }
     .start-button { 
         width: 150px;
         height: 56px;
-        letter-spacing: 3px;
-        font-size: 18px;
+        letter-spacing: var(--spacing-md);
+        font-size: var(--sub-heading-lg);
     }
     .button-container { 
-        margin: 20px;
+        margin: var(--m-7);
     }
     .hero-inner-container { 
         flex-direction: row;
@@ -179,9 +179,9 @@ body {
         max-width: 660px;
     }
     .img-inner-container { 
-        margin-top: 140px;
+        margin-top: var(--m-16);
     }
     .hero-container { 
-        margin-top: 0;
+        margin-top: var(--m-0);
     }
 }

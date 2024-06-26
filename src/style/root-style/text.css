@@ -1,0 +1,13 @@
+:root { 
+    --heading-lg : 32px; 
+    --heading-base : 29px; 
+    --heading-md : 27px; 
+    --heading-sm : 23px; 
+    --sub-heading-sm : 14px; 
+    --sub-heading-md : 16px; 
+    --sub-heading-lg : 18px; 
+    --text-sm : 11px; 
+
+    --spacing-sm : 2px; 
+    --spacing-md : 3px; 
+}

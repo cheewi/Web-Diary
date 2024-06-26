@@ -1,0 +1,18 @@
+:root { 
+    --pearl-white : #FFFFFF; 
+    --gray-white : #F9F9F9; 
+    --primary-100 : #FCFCFB; 
+    --primary-200 : #CACACA; 
+    --primary-300 : #A6A8A8; 
+    --primary-400 : #848484; 
+    --primary-500 : #6B6B6C; 
+    --primary-600 : #5B5B5C; 
+    --primary-800 : #2C2C2C; 
+    --primary-900 : #252527; 
+    --secondary-300 : #9370DB; 
+    --secondary-400 : #9747FF; 
+    --secondary-600 : #693996; 
+    --secondary-700 : rgba(151, 71, 255, 0.5); 
+    --secondary-800 : rgba(151, 71, 255, 0.4); 
+    --secondary-900 : #56198B; 
+}

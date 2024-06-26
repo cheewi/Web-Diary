@@ -8,7 +8,7 @@
     justify-content: space-between;
     gap: 12px;
     width: 90%;
-    border-top: 1px solid #2c2c2c;
+    border-top: 1px solid var(--primary-800);
 }
 
 .footer-icon { 
@@ -21,23 +21,17 @@
 }
 
 .footer-name { 
-    font-family: Montserrat;
-    margin: 0;
-    margin-top: 11px;
-    margin-bottom: 11px;
     text-wrap: nowrap;
 }
 
-.footer-copyright { 
+.footer-copyright, .footer-name { 
     font-family: Montserrat;
     text-align: right;
-}
-
-.footer-name { 
-    font-size: 11px;
-}
-.footer-copyright { 
-    font-size: 11px;
+    font-size: var(--text-sm);
+    font-weight: var(--fw-normal);
+    margin: var(--m-0);
+    margin-top: var(--m-3);
+    margin-bottom: var(--m-3);
 }
 .footer-img-container { 
     width: 40px;
