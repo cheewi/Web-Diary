@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Card Component</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./src/style/components.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <div class="cards-container" id="cards-container"></div>
+    </div>
+ 
+    <button class="plus-button" id="open-add-modal">+</button>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- <div class="card">
+        <div class="card-title-container">
+            <h3 class="card-title">TITLE</h3>
+        </div>
+        <div class="card-content-container">
+            <p class="card-content">
+                Lorem ipsum dolor sit amet. Ut corrupti saepe qui laboriosam perspiciatis sed quis magni? Vel voluptatem dolor aut internos dolorum non quaerat rerum sit dolor dolores id fuga voluptatem? Sed galisum molestiae id nulla ducimus ab.
+            </p>
+        </div>
+        <div class="card-footer">
+            <div class="card-date-container">
+                <p class="card-date">59/293/292</p>
+            </div>
+        </div>
+    </div>
+     -->
+    <!-- TESTING DESIGN FOR ADD MODAL -->
+    <div class="modal" id="add-modal">
+        <div class="modal-content">
+            <span class="close" id="close-add-modal">&times;</span>
+            <div class="card-title-container-modal">
+                <h3 class="card-title-modal">ADD CARD</h3>
+            </div>
+            <div class="title-input-container">
+                <input type="text" id="title-input" placeholder="Title">
+            </div>
+            <div class="content-input-container">
+                <textarea id="content-input" placeholder="Content"></textarea>
+            </div>
+            <div class="modal-footer">
+                <div class="date-input-container">
+                    <input type="date" id="date-input">
+                </div>
+                <button class="purple-button small no-shadow" id="add-card-button">
+                    ADD
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for editing cards -->
+    <div class="modal" id="edit-modal">
+        <div class="modal-content">
+            <span class="close" id="close-edit-modal">&times;</span>
+            <div class="card-title-container-modal">
+                <h3 class="card-title-modal">Edit Card</h3>
+            </div>
+            <div class="title-input-container">
+                <input type="text" id="edit-title-input" placeholder="Title">
+            </div>
+            <div class="content-input-container">
+                <textarea id="edit-content-input" placeholder="Content"></textarea>
+            </div>
+            <div class="modal-footer">
+                <div class="date-input-container">
+                    <input type="date" id="edit-date-input">
+                </div>
+                <button class="purple-button small no-shadow" id="save-edit-btn">
+                    SAVE
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for viewing cards -->
+    <!-- <div class="modal" id="view-modal">
+        <div class="modal-content">
+            <span class="close" id="close-view-modal">&times;</span>
+            <h2 id="view-title"></h2>
+            <p id="view-date"></p>
+            <p id="view-content"></p>
+        </div>
+    </div> -->
+    <div class="modal" id="view-modal">
+        <div class="modal-content">
+            <span class="close" id="close-view-modal">&times;</span>
+            <div class="card-title-container">
+                <h3 class="card-title" id="view-title"></h3>
+            </div>
+            <div class="card-footer">
+                <div class="card-date-container">
+                    <p class="card-date" id="view-date"></p>
+                </div>
+            </div>
+            <div class="card-content-container">
+                <p class="card-content" id="view-content"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
