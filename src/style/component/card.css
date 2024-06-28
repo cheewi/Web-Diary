@@ -1,3 +1,5 @@
+/* Styling for the preview card component  */
+
 .card { 
     font-family: Montserrat;
     padding: var(--p-4);
@@ -5,6 +7,8 @@
     border-radius: var(--br-5);
     box-shadow: var(--shadow-st);
 }
+
+/* Styling for the title section of the card */
 
 .card-title { 
     font-family: RaleWay;
@@ -18,11 +22,14 @@
     text-overflow: ellipsis;
     cursor: pointer;
 }
+
 .card-title-container { 
     border-bottom: 2px solid var(--primary-600);
     margin: var(--m-2) var(--m-0);
     padding-bottom: var(--p-0-5);
 }
+
+/* Styling for the content section of the card */
 
 .card-content { 
     margin: var(--m-3) var(--m-0);
@@ -39,6 +46,8 @@
     border-radius: var(--br-2);
     padding: var(--p-0-5);
 }
+
+/* Styling for the footer section of the card */
 
 .card-footer { 
     display: flex;

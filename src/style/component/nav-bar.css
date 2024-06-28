@@ -1,4 +1,4 @@
-/* NAV-BAR SECTION */
+/* Styling for common styles of the nav-bar */
 .nav-container { 
     display: flex;
     justify-content: center;
@@ -51,6 +51,7 @@
     text-decoration: underline;
     font-weight: var(--fw-medium);
 }
+
 .purple-sub-heading { 
     color: var(--secondary-400);
 }
@@ -61,7 +62,7 @@
 }
 
 
-/* RESPONSIVE FOR MOBILE */
+/* Styling for responsiveness for the nav-bar */
 
 @media (max-width : 390px) { 
     .logo-heading { 
@@ -77,7 +78,6 @@
     }
 }
 
-/* RESPONSIVE FOR TABLET */
 @media (min-width : 391px) and (max-width : 1024px) { 
     .logo-heading { 
         font-size: var(--heading-md);
@@ -91,7 +91,6 @@
     }
 }
 
-/* RESPONSIVE FOR LAPTOP-DESKTOP */
 @media (min-width : 1025px) { 
     .logo-heading { 
         font-size: var(--heading-lg);

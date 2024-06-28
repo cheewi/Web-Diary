@@ -1,9 +1,11 @@
-import { addCard } from './create.js';
-import { editCard, saveEdit } from './edit.js';
-import { viewCard } from './view.js';
-import { deleteCard } from './delete.js';
+import { addCard } from './createCard.js';
+import { editCard, saveEdit } from './editCard.js';
+import { viewCard } from './viewCard.js';
+import { deleteCard } from './deleteCard.js';
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    // Grab the ids for all the element for creating the cards
     const titleInput = document.getElementById("title-input");
     const contentInput = document.getElementById("content-input");
     const dateInput = document.getElementById("date-input");
@@ -14,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const openAddModal = document.getElementById("open-add-modal");
     const closeAddModal = document.getElementById("close-add-modal");
 
+    // Grab the ids for all the element for editing the cards
     const editModal = document.getElementById("edit-modal");
     const closeEditModal = document.getElementById("close-edit-modal");
     const saveEditBtn = document.getElementById("save-edit-btn");
@@ -21,12 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const editContentInput = document.getElementById("edit-content-input");
     const editDateInput = document.getElementById("edit-date-input");
 
+    // Grab the ids for all the element for viewing the cards
     const viewModal = document.getElementById("view-modal");
     const closeViewModal = document.getElementById("close-view-modal");
     const viewTitle = document.getElementById("view-title");
     const viewContent = document.getElementById("view-content");
     const viewDate = document.getElementById("view-date");
 
+    // Grab the id for the overlay for when the modals are active
     const overlay = document.getElementById("overlay");
 
     let cards = JSON.parse(localStorage.getItem("cards")) || [];
@@ -37,11 +42,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function renderCards() {
+        // Initialising its inner html
         cardsContainer.innerHTML = '';
+        // looping through the generated cards (key in the local storage)
+
         cards.forEach((card, index) => {
+            // Inner html for the actual preview card 
             const cardElement = document.createElement("div");
             cardElement.className = "card";
             
+            // Inner html of the contents of the preview card
             cardElement.innerHTML = `
                 <div class="card-title-container">
                     <h3 class="card-title">${card.title}</h3>
@@ -66,43 +76,67 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                 </div>
             `;
+
+            // Putting the generated card into the container
             cardsContainer.appendChild(cardElement);
         });
     }
 
+    // Edit card at the specified card index 
     window.editCard = function(index) {
         editCard(cards, index, editTitleInput, editContentInput, editDateInput, editModal, overlay);
     };
 
+    // Delete card at the specified card index
     window.deleteCard = function(index) {
         deleteCard(cards, index, saveCards, renderCards);
     };
 
+    // View card at the specified card index
     window.viewCard = function(index) {
         viewCard(cards, index, viewTitle, viewContent, viewDate, viewModal, overlay);
     }
+    // Watching the click event for the add card
 
     addCardButton.addEventListener("click", () => addCard(cards, saveCards, renderCards, titleInput, contentInput, dateInput, addModal, overlay));
+
+    //Watching the click event for the modal cards
     openAddModal.addEventListener("click", () => {
+        // Toggle the display for the modal and the overlay
+    
         addModal.style.display = "block";
         overlay.style.display = "block";
-        document.body.style.overflow = "hidden"; // Disable background scrolling
+        // Disable background scrolling
+        document.body.style.overflow = "hidden"; 
     });
+
     closeAddModal.addEventListener("click", () => {
+        // Toggle the display for the modal and the overlay
         addModal.style.display = "none";
         overlay.style.display = "none";
-        document.body.style.overflow = "auto"; // Re-enable background scrolling
+
+        // Re-enable background scrolling
+        document.body.style.overflow = "auto"; 
     });
+    
     closeEditModal.addEventListener("click", () => {
+        // Toggle the display for the modal and the overlay
         editModal.style.display = "none";
         overlay.style.display = "none";
-        document.body.style.overflow = "auto"; // Re-enable background scrolling
+
+        // Re-enable background scrolling
+        document.body.style.overflow = "auto"; 
     });
+
     saveEditBtn.addEventListener("click", () => saveEdit(cards, currentEditIndex, saveCards, renderCards, editTitleInput, editContentInput, editDateInput, editModal, overlay));
     closeViewModal.addEventListener("click", () => {
+
+        // Toggle the display for the modal and the overlay
         viewModal.style.display = "none";
         overlay.style.display = "none";
-        document.body.style.overflow = "auto"; // Re-enable background scrolling
+
+        // Re-enable background scrolling
+        document.body.style.overflow = "auto"; 
     });
 
     renderCards();

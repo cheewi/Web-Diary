@@ -1,4 +1,5 @@
-/* All root styles are placeholder values */
+/* All root styles for the button component */
+
 :root {
     --mobile-width-large: 100px; 
     --mobile-height-large: 42px; 
@@ -24,6 +25,8 @@
     --hover-shadow :  0 15px 25px var(--secondary-700);  
     --active-shadow :  0 5px 10px var(--secondary-800);  
 }
+
+/* Common styling for the button */
 
 .purple-button { 
     font-family: Montserrat;
@@ -51,28 +54,37 @@
     transform: translateY(1px);
 }
 
+/* Styling across breakpoints */
+
 @media (max-width: 390px) {
+    .purple-button { 
+        letter-spacing: var(--spacing-sm);
+    }
+
     .large {
         width: var(--mobile-width-large);
         height: var(--mobile-height-large);
         font-size: var(--mobile-text-large);
-        letter-spacing: var(--spacing-sm);
     }
+
     .small {
         width: var(--mobile-width-small);
         height: var(--mobile-height-small);
         font-size: var(--mobile-text-small);
-        letter-spacing: 0;
     }
 }
 
 @media (min-width: 391px) and (max-width: 1024px) {
+    .purple-button { 
+        letter-spacing: var(--spacing-md);
+    }
+
     .large {
         width: var(--tablet-width-large);
         height: var(--tablet-height-large);
         font-size: var(--tablet-text-large);
-        letter-spacing: var(--spacing-md);
     }
+
     .small {
         width: var(--tablet-width-small);
         height: var(--tablet-height-small);
@@ -81,18 +93,24 @@
 }
 
 @media (min-width: 1025px) {
+    .purple-button { 
+        letter-spacing: var(--spacing-md);
+    }
+
     .large {
         width: var(--desktop-width-large);
         height: var(--desktop-height-large);
         font-size: var(--desktop-text-large);
-        letter-spacing: var(--spacing-md);
     }
+
     .small {
         width: var(--desktop-width-small);
         height: var(--desktop-height-small);
         font-size: var(--desktop-text-small);
     }
 }
+
+/* Styling for the no-shadow toggle */
 
 .no-shadow, 
 .no-shadow:hover, 

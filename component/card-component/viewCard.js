@@ -1,5 +1,7 @@
 class viewCardComponent extends HTMLElement {
     connectedCallback() {
+
+        // Html for the view card
         this.innerHTML = `
         <div class="modal" id="view-modal">
             <div class="modal-content">
@@ -40,14 +42,18 @@ class viewCardComponent extends HTMLElement {
         `;
     }
 }
-
+// Define the component for the html
 customElements.define('view-card', viewCardComponent);
 
+// Export the function with all its parameters 
 
 export function viewCard(cards, index, viewTitle, viewContent, viewDate, viewModal, overlay) {
+    // Display the title, content, and date of the card at the specified index
     viewTitle.textContent = cards[index].title;
     viewContent.textContent = cards[index].content;
     viewDate.textContent = cards[index].date;
+
+    // Show the view modal and overlay
     viewModal.style.display = "block";
     overlay.style.display = "block";
     document.body.style.overflow = "hidden"; // Disable background scrolling

@@ -1,12 +1,12 @@
 @import url(./components.css);
 
+/* Styling for the entire body */
 body { 
     margin: var(--m-0);
     padding: var(--p-0);
 }
 
-
-/* HERO SECTION */
+/* Styling for common style of the page */
 
 .container { 
     display: flex;
@@ -60,6 +60,7 @@ body {
     margin-right: auto;
 }
 
+/* Styling for the responsivenss of the page */
 
 @media (max-width : 390px) { 
     .img-inner-container { 
