@@ -6,13 +6,48 @@
     box-shadow: var(--shadow-st);
     border-radius: var(--br-5);
     padding: var(--p-4);
-    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    z-index: 1000; 
+    display: none; 
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+    display: none; 
+}
+
+.card-content { 
+    font-family: Montserrat;
+}
+
+.title-input-container,
+.date-container-view { 
+    background-color: var(--gray-white); 
+    border-radius: var(--br-2);
+    padding: var(--p-0-5);
+    margin: var(--m-3) var(--m-0-5);
+}
+
+.date-container-view { 
+    font-family: Montserrat;
 }
 
 #title-input, 
 #content-input, 
 #edit-title-input, 
-#edit-content-input { 
+#edit-content-input,
+#view-title { 
     outline: none;
     border: none;
     font-family: Montserrat;
@@ -22,13 +57,6 @@
     cursor: pointer;
 }
 
-.title-input-container { 
-    background-color: var(--gray-white); 
-    border-radius: var(--br-2);
-    padding: var(--p-0-5);
-    margin: var(--m-3) var(--m-0-5);
-}
-
 .content-input-container { 
     background-color: var(--gray-white); 
     border-radius: var(--br-2);
@@ -36,25 +64,58 @@
     margin: var(--m-3) var(--m-0-5);
 }
 
-
-#content-input, #edit-content-input { 
-    min-height: 400px;
+#content-input, 
+#edit-content-input,
+#view-content { 
+    min-height: 460px;
     scrollbar-width: none; 
+    overflow-y: auto;
     cursor: pointer;
 }
-#title-input, #edit-title-input { 
-    min-height: 40px;
+
+#title-input, 
+#edit-title-input,
+#view-title { 
+    min-height: 60px;
+    font-weight: var(--fw-medium);
 }
+
 textarea { 
     width: var(--w-full);
     height: var(--h-full);
 }
+
+#view-content { 
+    padding: var(--p-0-5);
+    margin: var(--m-0);
+}
+
+.box-title-container { 
+    font-family: RaleWay;
+    padding: var(--p-0-5);
+    margin: var(--m-0-5);
+    font-size: var(--sub-heading-lg);
+    font-weight: var(--fw-semibold);
+    display: flex;
+}
+
+.box-title { 
+    font-family: RaleWay;
+    margin: var(--m-0);
+    margin-bottom: var(--m-0-5);
+    border-bottom: var(--border-sm);
+}
+
 
 .card-title-container-modal { 
     padding: var(--p-0-5);
     margin: var(--m-0-5);
     border-bottom: 2px solid var(--primary-600);
     margin-bottom: var(--m-2);
+}
+
+::-webkit-calendar-picker-indicator {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%239747FF" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
 }
 
 .card-title-modal { 
@@ -71,7 +132,7 @@ textarea {
     font-weight: bold;
     display: block;
     float: right;
-}
+} 
 
 .close:hover,
 .close:focus {
@@ -87,8 +148,8 @@ textarea {
     margin: var(--m-3) var(--m-0-5);
 }
 
-
-#date-input, #edit-date-input { 
+#date-input, 
+#edit-date-input { 
     font-family: Montserrat;
     outline: none;
     border: none;
@@ -97,10 +158,14 @@ textarea {
     width: var(--w-full);
 }
 
-.date-input-container { 
+.date-container { 
     border: 2px solid var(--secondary-400);
     padding: var(--p-2);
     border-radius: var(--br-3);
+}
+
+.date-container-view { 
+
 }
 
 .overlay {
@@ -114,29 +179,18 @@ textarea {
     display: none; 
 }
 
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    padding: 20px;
-    z-index: 1000; 
-    display: none; 
-}
-
 @media (max-width : 390px) { 
-    .date-input-container { 
+    .date-container { 
         padding: 7px;
     }
 }
 @media (min-width : 391px) and (max-width : 1024px) { 
-    .date-input-container { 
+    .date-container { 
         padding: var(--p-3);
     }
 }
 @media (min-width : 1025px) { 
-    .date-input-container { 
+    .date-container { 
         padding: var(--p-4-5);
     }
 }

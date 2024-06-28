@@ -1,3 +1,8 @@
+import { addCard } from './create.js';
+import { editCard, saveEdit } from './edit.js';
+import { viewCard } from './view.js';
+import { deleteCard } from './delete.js';
+
 document.addEventListener("DOMContentLoaded", function() {
     const titleInput = document.getElementById("title-input");
     const contentInput = document.getElementById("content-input");
@@ -65,70 +70,19 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    function addCard() {
-        const title = titleInput.value.trim();
-        const content = contentInput.value.trim();
-        const date = dateInput.value;
-
-        if (title && content && date) {
-            cards.push({ title, content, date });
-            saveCards();
-            renderCards();
-            titleInput.value = '';
-            contentInput.value = '';
-            dateInput.value = '';
-            addModal.style.display = "none";
-            overlay.style.display = "none";
-            document.body.style.overflow = "auto"; // Re-enable background scrolling
-        }
-        else { 
-            alert('all card content need to be present')
-        }
-    }
-
     window.editCard = function(index) {
-        currentEditIndex = index;
-        editTitleInput.value = cards[index].title;
-        editContentInput.value = cards[index].content;
-        editDateInput.value = cards[index].date;
-        editModal.style.display = "block";
-        overlay.style.display = "block";
-        document.body.style.overflow = "hidden"; // Disable background scrolling
+        editCard(cards, index, editTitleInput, editContentInput, editDateInput, editModal, overlay);
     };
 
-    function saveEdit() {
-        const newTitle = editTitleInput.value.trim();
-        const newContent = editContentInput.value.trim();
-        const newDate = editDateInput.value;
-
-        if (newTitle && newContent && newDate) {
-            cards[currentEditIndex].title = newTitle;
-            cards[currentEditIndex].content = newContent;
-            cards[currentEditIndex].date = newDate;
-            saveCards();
-            renderCards();
-            editModal.style.display = "none";
-            overlay.style.display = "none";
-            document.body.style.overflow = "auto"; // Re-enable background scrolling
-        }
-    }
-
     window.deleteCard = function(index) {
-        cards.splice(index, 1);
-        saveCards();
-        renderCards();
+        deleteCard(cards, index, saveCards, renderCards);
     };
 
     window.viewCard = function(index) {
-        viewTitle.textContent = cards[index].title;
-        viewContent.textContent = cards[index].content;
-        viewDate.textContent = cards[index].date;
-        viewModal.style.display = "block";
-        overlay.style.display = "block";
-        document.body.style.overflow = "hidden"; // Disable background scrolling
+        viewCard(cards, index, viewTitle, viewContent, viewDate, viewModal, overlay);
     }
 
-    addCardButton.addEventListener("click", addCard);
+    addCardButton.addEventListener("click", () => addCard(cards, saveCards, renderCards, titleInput, contentInput, dateInput, addModal, overlay));
     openAddModal.addEventListener("click", () => {
         addModal.style.display = "block";
         overlay.style.display = "block";
@@ -144,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function() {
         overlay.style.display = "none";
         document.body.style.overflow = "auto"; // Re-enable background scrolling
     });
-    saveEditBtn.addEventListener("click", saveEdit);
+    saveEditBtn.addEventListener("click", () => saveEdit(cards, currentEditIndex, saveCards, renderCards, editTitleInput, editContentInput, editDateInput, editModal, overlay));
     closeViewModal.addEventListener("click", () => {
         viewModal.style.display = "none";
         overlay.style.display = "none";
