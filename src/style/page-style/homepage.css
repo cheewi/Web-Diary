@@ -1,6 +1,16 @@
 @import url(./components.css);
+body { 
+    margin: var(--m-0);
+    padding: var(--p-0);
+}
+
+.homepage-container {  
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 .plus-button {
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 20px;
 }
@@ -13,6 +23,9 @@
 
 .body-container { 
     display: flex;
+    margin-top: var(--m-13);
+    flex-grow: 1;
+    position: relative;
 }
 
 .cards-container { 
@@ -21,6 +34,19 @@
 
 .diary-container{ 
     margin: var(--m-0) var(--m-12);
+    flex-grow: 1;
+}
+
+#hamburger { 
+    height: 46px;
+    cursor: pointer;
+    margin: var(--m-12) var(--m-0);
+    background-color: var(--gray-white);
+    border-radius: var(--br-3);
+}
+
+#hamburger > img {
+    margin: var(--m-2);
 }
 
 @media (max-width : 490px) { 
@@ -32,6 +58,7 @@
     }
     .body-container { 
         flex-direction: column;
+        margin: var(--m-0);
     }
 }
 
@@ -44,6 +71,7 @@
     }
     .body-container { 
         flex-direction: column;
+        margin: var(--m-0);
     }
 }
 

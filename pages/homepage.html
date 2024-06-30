@@ -5,79 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <link rel="stylesheet" href="../src/style/page-style/homepage.css">
-    <script src="../component/common-components/main.js" type="module" async></script>
+    <script src="../component/common-components/main.js" type="module" defer></script>
     <script src="../component/card-component/card.js" type="module" defer></script>
-    <script src="../component/common-components/side-bar.js" defer></script>
-    <link rel="stylesheet" href="../src/style/page-style/homepage.css">
+    <script src="../src/script/homepage.js" defer></script>
 </head>
 <body>
     <!-- NAV-BAR SECTION -->
-    <nav-bar></nav-bar>
+    <main class="homepage-container">
+        <nav-bar></nav-bar>
     
-    <main class="body-container">
-        <section class="side-bar-container">
-    
+        <section class="body-container">
             <div id="hamburger">
-                <img src="../asset/homepage/svg/hamburger.svg" alt="">
+                <img src="../asset/homepage/svg/hamburger.svg" alt="hamburger button">
             </div>
-        
-            <aside class="side-bar" id="side-bar">
-                <span class="close" id="side-bar-close">&times;</span>
-                <div class="side-bar-profile-container">
-                    <div class="side-bar-profile">
-                        <div class="side-bar-img-container">
-                            <img src="../asset/homepage/img/cat-with-headphones.png" alt="">
-                        </div>
-                        <h5 class="profile-title">Cheewawi</h5>
-                    </div>
+            <section class="side-bar-container">
+                <side-bar></side-bar>
+            </section>
+
+            <section class="diary-container">
+                <div class="app-container">
+                    <div class="cards-container" id="cards-container"></div>
                 </div>
-        
-                <div class="side-bar-page-container">
-                    <div class="side-bar-page">
-                        <div class="side-bar-page-icon-container">
-                            <img src="../asset/footer/black-cat-jumppng.png" alt="">
-                        </div>
-                        <h5 class="page-title">HOMEPAGE</h5>
-                    </div>
-                </div>
-        
-                <div class="dashboard-container">
-                    <h3 class="dashboard-container-title">DIARY ENTRY LOG</h3>
-                    <div id="dashboard">
-                        <dashboard-card id="total-cards"></dashboard-card>
-                        <dashboard-card id="cards-this-week"></dashboard-card>
-                        <dashboard-card id="cards-this-month"></dashboard-card>
-                    </div>
-                </div>
-            </aside>
+                <div class="overlay" id="overlay"></div>
+                <view-card></view-card>
+                <edit-card></edit-card>
+                <create-card></create-card>
+            </section>
+            <plus-button></plus-button>
         </section>
 
-        <section class="diary-container">
-            <div class="app-container">
-                <div class="cards-container" id="cards-container"></div>
-            </div>
-            <div class="overlay" id="overlay"></div>
-            <view-card></view-card>
-            <edit-card></edit-card>
-            <create-card></create-card>
-        </section>
+        <custom-footer custom-path="../"></custom-footer>
     </main>
-
-
-
-
-
-
-
-
-    <plus-button></plus-button>
-    <!-- <div id="dashboard">
-        <dashboard-card id="total-cards"></dashboard-card>
-        <dashboard-card id="cards-this-week"></dashboard-card>
-        <dashboard-card id="cards-this-month"></dashboard-card>
-    </div> -->
-    
-
     
 </body>
+
 </html>

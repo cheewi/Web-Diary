@@ -3,8 +3,6 @@ import { editCard, saveEdit } from './editCard.js';
 import { viewCard } from './viewCard.js';
 import { deleteCard } from './deleteCard.js';
 import { updateDashboard } from '../common-components/dashboard.js';
-
-
 document.addEventListener("DOMContentLoaded", function() {
     // Grab the IDs for all the elements for creating the cards
     const titleInput = document.getElementById("title-input");
@@ -102,13 +100,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Watching the click event for the modal cards
     openAddModal.addEventListener("click", () => {
-        alert('mew')
         // Toggle the display for the modal and the overlay
         addModal.style.display = "block";
         overlay.style.display = "block";
         // Disable background scrolling
         document.body.style.overflow = "hidden"; 
     });
+
 
     closeAddModal.addEventListener("click", () => {
         // Toggle the display for the modal and the overlay

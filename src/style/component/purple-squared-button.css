@@ -44,7 +44,7 @@
 
 /* Styling across breakpoints */
 
-@media (max-width: 390px) {
+@media (max-width: 429px) {
     .purple-button { 
         letter-spacing: var(--spacing-sm);
     }
@@ -62,7 +62,7 @@
     }
 }
 
-@media (min-width: 391px) and (max-width: 1024px) {
+@media (min-width: 430px) and (max-width: 1024px) {
     .purple-button { 
         letter-spacing: var(--spacing-md);
     }

@@ -11,7 +11,7 @@
 	z-index: 20;
 }
   
-/* .plus-button::before {
+.plus-button::before {
 	position: absolute;
 	content: "";
 	top: 0;
@@ -22,11 +22,11 @@
 	border-color: transparent white transparent transparent;
 	transition-timing-function: ease-in-out;
 	transition-duration: 0.2s;
-} */
+}
 
-/* .plus-button:hover {
+.plus-button:hover {
 	cursor: pointer;
-} */
+}
 
 .plus-button>.plus-icon {
 	fill: white;
@@ -35,17 +35,17 @@
 	transition-duration: 0.2s;
 }
 
-/* .plus-button:hover>.plus-icon {
+.plus-button:hover>.plus-icon {
 	fill: var(--secondary-300);
 	transform: rotate(180deg);
-} */
+}
 
 .plus-button:focus-visible>.plus-icon {
 	fill: var(--secondary-300);
 	transform: rotate(180deg);
 }
 
-@media (max-width : 390px) { 
+@media (max-width : 429px) { 
 	.plus-button { 
 		width: var(--mob-sl);
 		height: var(--mob-sl);
@@ -66,7 +66,7 @@
 	}
 }
 
-@media (min-width : 391px) and (max-width : 1024px) { 
+@media (min-width : 430px) and (max-width : 1024px) { 
 	.plus-button { 
 		width: var(--tab-sl);
 		height: var(--tab-sl);

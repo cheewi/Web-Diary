@@ -64,7 +64,7 @@
 
 /* Styling for responsiveness for the nav-bar */
 
-@media (max-width : 390px) { 
+@media (max-width : 429px) { 
     .logo-heading { 
         font-size: var(--heding-sm);
         letter-spacing:  var(--spacing-sm);
@@ -78,7 +78,7 @@
     }
 }
 
-@media (min-width : 391px) and (max-width : 1024px) { 
+@media (min-width : 430px) and (max-width : 1024px) { 
     .logo-heading { 
         font-size: var(--heading-md);
     }

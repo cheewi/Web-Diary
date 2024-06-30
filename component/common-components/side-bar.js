@@ -1,23 +1,40 @@
-const hamburger = document.getElementById('hamburger');
-const sideBar = document.getElementById('side-bar');
-const sideBarCloseButton = document.getElementById('side-bar-close')
+class sideBarComponent extends HTMLElement {
+    connectedCallback() {
 
-const sideBarResize = () => { 
-    if (window.innerWidth >= 1024) { 
-        sideBar.style.left = '0';
-    }
-    else { 
-        sideBar.style.left = '-100%';
+        // Html for the edit pop up modal
+        this.innerHTML = `
+            <aside class="side-bar" id="side-bar">
+                <span class="close" id="side-bar-close">&times;</span>
+                <div class="side-bar-profile-container">
+                    <div class="side-bar-profile">
+                        <div class="side-bar-img-container">
+                            <img src="../asset/homepage/img/cat-with-headphones.png" alt="">
+                        </div>
+                        <h5 class="profile-title">Cheewawi</h5>
+                    </div>
+                </div>
+        
+                <div class="side-bar-page-container">
+                    <div class="side-bar-page">
+                        <div class="side-bar-page-icon-container">
+                            <img src="../asset/footer/black-cat-jumppng.png" alt="">
+                        </div>
+                        <h5 class="page-title">HOMEPAGE</h5>
+                    </div>
+                </div>
+        
+                <div class="dashboard-container">
+                    <h3 class="dashboard-container-title">DIARY ENTRY LOG</h3>
+                    <div id="dashboard">
+                        <dashboard-card id="total-cards"></dashboard-card>
+                        <dashboard-card id="cards-this-week"></dashboard-card>
+                        <dashboard-card id="cards-this-month"></dashboard-card>
+                    </div>
+                </div>
+            </aside>
+        `;
     }
 }
-
-hamburger.addEventListener('click', ()=>{
-    sideBar.style.left = '0%'
-});
-
-sideBarCloseButton.addEventListener('click', () => { 
-    sideBar.style.left = '-100%'
-});
-
-window.addEventListener('resize' , sideBarResize)
-document.addEventListener('DOMContentLoaded' , sideBarResize )
+// Defining the card modal 
+customElements.define('side-bar', sideBarComponent);
+export {sideBarComponent}

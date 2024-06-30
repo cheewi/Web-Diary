@@ -3,7 +3,7 @@ aside {
     position: absolute;
     transition: ease-in-out;
     transition-duration: 500ms;
-    z-index: 50;
+    z-index: 1000;
 }
 .side-bar { 
     font-family: Montserrat;
@@ -73,7 +73,6 @@ aside {
     text-align: center;
 }
 
-
 #dashboard { 
     width: var(--w-full);
     display: flex;
@@ -81,14 +80,14 @@ aside {
     align-items: center;
 }
 
-@media (max-width : 390px) { 
+@media (max-width : 429px) { 
     .side-bar { 
         max-width : 80%;
         height: 739px;
     }
 }
 
-@media (min-width : 391px) { 
+@media (min-width : 430px) { 
     .side-bar { 
     width: 320px;
     height: 739px;

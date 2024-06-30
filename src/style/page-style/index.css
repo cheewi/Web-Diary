@@ -63,6 +63,12 @@ body {
 /* Styling for the responsivenss of the page */
 
 @media (max-width : 390px) { 
+    .detail-container { 
+        margin-bottom: var(--m-12);
+    }
+}
+
+@media (max-width : 429px) { 
     .img-inner-container { 
         max-width: 380px;
         max-height: 380px;
@@ -79,12 +85,11 @@ body {
         flex-direction: column;
     }
     .img-inner-container { 
-        margin-left: var(--m-0-5);
-        margin-right: var(--m-0-5);
+        margin: var(--m-0) auto;
     }
 }
 
-@media (min-width: 391px) and (max-width : 1024px) { 
+@media (min-width: 430px) and (max-width : 1024px) { 
     .img-inner-container { 
         max-width: 720px;
         max-height: 720px;

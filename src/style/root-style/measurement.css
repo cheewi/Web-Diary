@@ -19,11 +19,11 @@
     /* Root styles for the plus button */
     /* sl = sidelength
     trsl = top right triangle side length */
-    --mob-sl : 32px;
-	--tab-sl : 36px;
-	--des-sl : 48px;
+    --mob-sl : 36px;
+	--tab-sl : 46px;
+	--des-sl : 56px;
 
-	--mob-trsl : 10px;
-	--tab-trsl : 12px;
+	--mob-trsl : 12px;
+	--tab-trsl : 16px;
 	--des-trsl : 18px;
 }
