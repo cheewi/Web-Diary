@@ -1,12 +1,22 @@
 /* Styling for the preview card component  */
 
-.card { 
+.card {
     font-family: Montserrat;
+    height: 225px;
     padding: var(--p-4);
     border: var(--border-st);
     border-radius: var(--br-5);
-    box-shadow: var(--shadow-st);
+    box-shadow: var(--shadow-st-lg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: white;
+    z-index: 10;
 }
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hov-lg);
+}
+
 
 /* Styling for the title section of the card */
 
@@ -25,7 +35,7 @@
 
 .card-title-container { 
     border-bottom: 2px solid var(--primary-600);
-    margin: var(--m-2) var(--m-0);
+    margin: var(--m-3) var(--m-0);
     padding-bottom: var(--p-0-5);
 }
 
@@ -42,6 +52,7 @@
     cursor: pointer;
 }
 .card-content-container { 
+    height: 82px;
     background-color: var(--gray-white); 
     border-radius: var(--br-2);
     padding: var(--p-0-5);
@@ -50,12 +61,13 @@
 /* Styling for the footer section of the card */
 
 .card-footer { 
+    height: 52px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--gray-white);
     border-radius: var(--br-2);
-    margin-top: var(--m-2);
+    margin-top: var(--m-3);
     padding: var(--p-0) var(--p-1);
     cursor: pointer;
 }

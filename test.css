@@ -1,0 +1,71 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    display: none;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 16px;
+    transition: margin-left 0.5s;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        padding-top: 0;
+    }
+
+    .sidebar .closebtn {
+        display: block;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .openbtn {
+        display: inline-block;
+    }
+}

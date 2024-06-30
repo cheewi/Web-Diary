@@ -1,22 +1,10 @@
 /* All root styles for the button component */
 
 :root {
-    --mobile-width-large: 100px; 
-    --mobile-height-large: 42px; 
-    --tablet-width-large: 130px; 
-    --tablet-height-large: 50px; 
-    --desktop-width-large: 150px; 
-    --desktop-height-large: 56px; 
     --mobile-text-large : var(--sub-heading-sm);
     --tablet-text-large : var(--sub-heading-md);
     --desktop-text-large : var(--sub-heading-lg);
-
-    --mobile-width-small: 82px; 
-    --mobile-height-small: 38px; 
-    --tablet-width-small: 100px; 
-    --tablet-height-small: 46px; 
-    --desktop-width-small: 120px; 
-    --desktop-height-small: 52px; 
+    
     --mobile-text-small : var(--text-sm);
     --tablet-text-small : var(--sub-heading-sm);
     --desktop-text-small : var(--sub-heading-md);

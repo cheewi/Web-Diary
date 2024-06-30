@@ -1,6 +1,7 @@
+import { updateDashboard } from "../common-components/dashboard.js";
+
 class createCardComponent extends HTMLElement {
     connectedCallback() {
-
         // Html for the create card modal
         this.innerHTML = `
             <div class="modal" id="add-modal">
@@ -32,7 +33,8 @@ class createCardComponent extends HTMLElement {
         `;
     }
 }
-//Defining the modal card for the html
+
+// Defining the modal card for the html
 customElements.define('create-card', createCardComponent);
 
 // Exporting this card with its parameters
@@ -45,12 +47,16 @@ export function addCard(cards, saveCards, renderCards, titleInput, contentInput,
 
     // Check if all required fields are filled
     if (title && content && date) {
+        // Store the timestamp
+        const timestamp = new Date().getTime();
+
         // Add new card to the cards array
-        cards.push({ title, content, date });
+        cards.push({ title, content, date, timestamp });
 
         // Save updated cards and re-render the list
         saveCards();
         renderCards();
+        updateDashboard(cards);
 
         // Clear input fields and hide the add modal and overlay
         titleInput.value = '';
@@ -59,13 +65,8 @@ export function addCard(cards, saveCards, renderCards, titleInput, contentInput,
         addModal.style.display = "none";
         overlay.style.display = "none";
         document.body.style.overflow = "auto"; // Re-enable background scrolling
-    } 
-
-    // Catch case for when not all the info is present 
-    else {
+    } else {
+        // Catch case for when not all the info is present
         alert('All card content needs to be present');
     }
 }
-
-
-

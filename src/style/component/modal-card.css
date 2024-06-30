@@ -46,6 +46,7 @@
     margin: var(--m-2) var(--m-0);
 }
 
+
 /* Styling for the close button of the card */
 
 .close {
@@ -120,6 +121,7 @@ textarea {
 #view-content { 
     padding: var(--p-0-5);
     margin: var(--m-0);
+    font-family: Montserrat;
 }
 
 /* Styling for the footer section of the card modal */

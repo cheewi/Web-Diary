@@ -1,0 +1,43 @@
+.dashboard-card {
+    width: 90%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: var(--p-1);
+    border: var(--border-st);
+    border-radius: var(--br-5);
+    box-shadow: var(--shadow-st);
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-in-out;
+    margin-bottom: var(--m-3);
+}
+
+.dashboard-card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.dashboard-img-container {
+    width: 60px;
+    height: 60px;
+}
+
+.dashboard-title {
+    font-family: RaleWay;
+    font-size: var(--sub-heading-md);
+    font-weight: bold;
+    color: var(--black);
+    margin: var(--m-0);
+    margin-bottom: var(--m-1);
+}
+
+.dashboard-content {
+    color: var(--black);
+    font-size: var(--text-sm);
+    font-family: Montserrat;
+    margin: var(--m-0);
+}
+
+.dashboard-img { 
+    height: var(--h-full);
+}

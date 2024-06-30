@@ -1,4 +1,29 @@
 :root { 
     --w-full : 100%; 
-    --h-full : 100%
+    --h-full : 100%;
+    /* Root styles for the purple-squared button */
+    --mobile-width-large: 100px; 
+    --mobile-height-large: 42px; 
+    --tablet-width-large: 130px; 
+    --tablet-height-large: 50px; 
+    --desktop-width-large: 150px; 
+    --desktop-height-large: 56px; 
+
+    --mobile-width-small: 82px; 
+    --mobile-height-small: 38px; 
+    --tablet-width-small: 100px; 
+    --tablet-height-small: 46px; 
+    --desktop-width-small: 120px; 
+    --desktop-height-small: 52px; 
+
+    /* Root styles for the plus button */
+    /* sl = sidelength
+    trsl = top right triangle side length */
+    --mob-sl : 32px;
+	--tab-sl : 36px;
+	--des-sl : 48px;
+
+	--mob-trsl : 10px;
+	--tab-trsl : 12px;
+	--des-trsl : 18px;
 }

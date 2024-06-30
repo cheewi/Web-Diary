@@ -54,6 +54,8 @@ export function saveEdit(cards, currentEditIndex, saveCards, renderCards, editTi
     const newTitle = editTitleInput.value.trim();
     const newContent = editContentInput.value.trim();
     const newDate = editDateInput.value;
+    console.log(cards)
+    console.log(currentEditIndex)
 
     // Code for the case that if all the info is present
     if (newTitle && newContent && newDate) {
