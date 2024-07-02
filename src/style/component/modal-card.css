@@ -1,0 +1,195 @@
+/* General styling for the modal */
+
+.modal { 
+    font-family: Monserrat;
+    width: 80%;
+    margin: var(--m-2) auto;
+    border: var(--border-st);
+    box-shadow: var(--shadow-st);
+    border-radius: var(--br-5);
+    padding: var(--p-4);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    z-index: 1000; 
+    display: none; 
+}
+
+/* Styling for the overlay when the modals are opened */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+    display: none; 
+}
+
+/* Styling for the card title  */
+
+.card-title-container-modal { 
+    padding: var(--p-0-5);
+    margin: var(--m-0-5);
+    border-bottom: 2px solid var(--primary-600);
+    margin-bottom: var(--m-2);
+}
+
+.card-title-modal { 
+    font-family: RaleWay;
+    font-weight: var(--fw-bold);
+    font-size: var(--sub-heading-xl);
+    margin: var(--m-2) var(--m-0);
+}
+
+
+/* Styling for the close button of the card */
+
+.close {
+    color: var(--secondary-300);
+    font-size: var(--heading-lg);
+    padding: var(--p-0-5);
+    font-weight: bold;
+    display: block;
+    float: right;
+} 
+
+.close:hover,
+.close:focus {
+    color: var(--secondary-900);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.title-input-container,
+.date-container-view { 
+    background-color: var(--gray-white); 
+    border-radius: var(--br-2);
+    padding: var(--p-0-5);
+    margin: var(--m-3) var(--m-0-5);
+}
+
+#title-input, 
+#content-input, 
+#edit-title-input, 
+#edit-content-input,
+#view-title { 
+    outline: none;
+    border: none;
+    font-family: Montserrat;
+    font-size: var(--sub-heading-md);
+    background-color: transparent;
+    width: var(--w-full);
+    cursor: pointer;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#title-input, 
+#edit-title-input,
+#view-title { 
+    min-height: 60px;
+    font-weight: var(--fw-medium);
+}
+
+textarea { 
+    width: var(--w-full);
+    height: var(--h-full);
+}
+
+/* Styling for the content section of the modal card */
+
+.content-input-container { 
+    background-color: var(--gray-white); 
+    border-radius: var(--br-2);
+    padding: var(--p-0-5);
+    margin: var(--m-3) var(--m-0-5);
+}
+
+#content-input, 
+#edit-content-input,
+#view-content { 
+    min-height: 400px;
+    scrollbar-width: none; 
+    overflow-y: auto;
+    cursor: pointer;
+}
+
+#view-content { 
+    padding: var(--p-0-5);
+    margin: var(--m-0);
+    font-family: Montserrat;
+}
+
+/* Styling for the footer section of the card modal */
+
+.modal-footer { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--m-3) var(--m-0-5);
+}
+
+.box-title-container { 
+    font-family: RaleWay;
+    padding: var(--p-0-5);
+    margin: var(--m-0-5);
+    font-size: var(--sub-heading-lg);
+    font-weight: var(--fw-semibold);
+    display: flex;
+}
+
+.box-title { 
+    font-family: RaleWay;
+    margin: var(--m-0);
+    margin-bottom: var(--m-0-5);
+    border-bottom: var(--border-sm);
+}
+
+.date-container-view { 
+    font-family: Montserrat;
+}
+
+.date-container { 
+    border: 2px solid var(--secondary-400);
+    padding: var(--p-2);
+    border-radius: var(--br-3);
+}
+
+#date-input, 
+#edit-date-input { 
+    font-family: Montserrat;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: var(--sub-heading-sm);
+    width: var(--w-full);
+}
+
+::-webkit-calendar-picker-indicator {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%239747FF" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+}
+
+/* Styling for responsiveness of the date container for the card */
+
+@media (max-width : 429px) { 
+    .date-container { 
+        padding: 7px;
+    }
+}
+@media (min-width : 430px) and (max-width : 1024px) { 
+    .date-container { 
+        padding: var(--p-3);
+    }
+}
+@media (min-width : 1025px) { 
+    .date-container { 
+        padding: var(--p-4-5);
+    }
+}
+

@@ -1,0 +1,16 @@
+@import url(../component/card.css);
+@import url(../component/footer.css);
+@import url(../component/nav-bar.css);
+@import url(../component/purple-squared-button.css);
+@import url(../component/modal-card.css);
+@import url(../component/plus-button.css);
+@import url(../component/dashboard-card.css);
+@import url(../component/side-bar.css);
+
+@import url(../root-style/colors.css);
+@import url(../root-style/font-family.css);
+@import url(../root-style/font-weight.css);
+@import url(../root-style/margin-padding-radius.css);
+@import url(../root-style/measurement.css);
+@import url(../root-style/text.css);
+@import url(../root-style/border-shadow.css);

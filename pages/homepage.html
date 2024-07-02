@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="../src/style/page-style/homepage.css">
+    <script src="../component/common-components/main.js" type="module" defer></script>
+    <script src="../component/card-component/card.js" type="module" defer></script>
+    <script src="../src/script/homepage.js" defer></script>
+</head>
+<body>
+    <!-- NAV-BAR SECTION -->
+    <main class="homepage-container">
+        <nav-bar></nav-bar>
+    
+        <section class="body-container">
+            
+            <div id="hamburger">
+                <img src="../asset/homepage/svg/hamburger.svg" alt="hamburger button">
+            </div>
+            <section class="side-bar-container">
+                <side-bar></side-bar>
+            </section>
+
+            <section class="diary-container">
+                <div class="app-container">
+                    <div class="cards-container" id="cards-container"></div>
+                </div>
+                <div class="overlay" id="overlay"></div>
+                <view-card></view-card>
+                <edit-card></edit-card>
+                <create-card></create-card>
+            </section>
+            <div class="plus-button-container">
+                <plus-button></plus-button>
+            </div>
+        </section>
+
+        <custom-footer custom-path="../"></custom-footer>
+    </main>
+    
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+/* Styling for the preview card component  */
+
+.card {
+    font-family: Montserrat;
+    height: 225px;
+    padding: var(--p-4);
+    border: var(--border-st);
+    border-radius: var(--br-5);
+    box-shadow: var(--shadow-st-lg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: white;
+    z-index: 10;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hov-lg);
+}
+
+
+/* Styling for the title section of the card */
+
+.card-title { 
+    font-family: RaleWay;
+    font-weight: var(--fw-bold);
+    font-size: var(--sub-heading-xl);
+    margin: var(--m-0);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.card-title-container { 
+    border-bottom: 2px solid var(--primary-600);
+    margin: var(--m-3) var(--m-0);
+    padding-bottom: var(--p-0-5);
+}
+
+/* Styling for the content section of the card */
+
+.card-content { 
+    margin: var(--m-3) var(--m-0);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: var(--sub-heading-md);
+    cursor: pointer;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.card-content-container { 
+    height: 82px;
+    background-color: var(--gray-white); 
+    border-radius: var(--br-2);
+    padding: var(--p-0-5);
+}
+
+/* Styling for the footer section of the card */
+
+.card-footer { 
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gray-white);
+    border-radius: var(--br-2);
+    margin-top: var(--m-3);
+    padding: var(--p-0) var(--p-1);
+    cursor: pointer;
+}
+
+.card-buttons > button { 
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.card-date { 
+    font-size: var(--sub-heading-sm);
+    font-weight: var(--fw-medium);
+}

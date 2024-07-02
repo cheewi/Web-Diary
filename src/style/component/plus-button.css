@@ -1,0 +1,115 @@
+.plus-button-container { 
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	z-index: 999;
+}
+
+.plus-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--pearl-white);
+	background-color: var(--secondary-300);
+	overflow: hidden;
+	border-radius: var(--br-2);
+	cursor: pointer;
+	position: relative;
+}
+  
+.plus-button::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-color: transparent white transparent transparent;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+}
+
+.plus-button:hover {
+	cursor: pointer;
+}
+
+.plus-button>.plus-icon {
+	fill: white;
+	z-index: 1;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+}
+
+.plus-button:hover>.plus-icon {
+	fill: var(--secondary-300);
+	transform: rotate(180deg);
+}
+
+.plus-button:focus-visible>.plus-icon {
+	fill: var(--secondary-300);
+	transform: rotate(180deg);
+}
+
+@media (max-width : 429px) { 
+	.plus-button { 
+		width: var(--mob-sl);
+		height: var(--mob-sl);
+	}
+	.plus-button::before { 
+		border-width: 0 var(--mob-trsl) var(--mob-trsl) 0;
+	}
+	.plus-button:hover::before {
+		--mob-trsl : calc(var(--mob-sl) * 2);
+	}
+	
+	.plus-button:focus-visible::before {
+		--mob-trsl : calc(var(--mob-sl) * 2);
+	}
+	.plus-button>.plus-icon { 
+		width: calc(var(--mob-sl) * 0.7);
+		height: calc(var(--mob-sl) * 0.7);
+	}
+}
+
+@media (min-width : 430px) and (max-width : 1024px) { 
+	.plus-button { 
+		width: var(--tab-sl);
+		height: var(--tab-sl);
+	}
+	.plus-button::before { 
+		border-width: 0 var(--tab-trsl) var(--tab-trsl) 0;
+	}
+	.plus-button:hover::before {
+		--tab-trsl : calc(var(--tab-sl) * 2);
+	}
+	
+	.plus-button:focus-visible::before {
+		--tab-trsl : calc(var(--tab-sl) * 2);
+	}
+	.plus-button>.plus-icon { 
+		width: calc(var(--tab-sl) * 0.7);
+		height: calc(var(--tab-sl) * 0.7);
+	}
+}
+
+@media (min-width : 1025px) { 
+	.plus-button { 
+		width: var(--des-sl);
+		height: var(--des-sl);
+	}
+	.plus-button::before { 
+		border-width: 0 var(--des-trsl) var(--des-trsl) 0;
+	}
+	.plus-button:hover::before {
+		--des-trsl : calc(var(--des-sl) * 2);
+	}
+	
+	.plus-button:focus-visible::before {
+		--des-trsl : calc(var(--des-sl) * 2);
+	}
+	.plus-button>.plus-icon { 
+		width: calc(var(--des-sl) * 0.7);
+		height: calc(var(--des-sl) * 0.7);
+	}
+}

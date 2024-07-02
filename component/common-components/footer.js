@@ -28,3 +28,4 @@ class Footer extends HTMLElement {
 }
 
 customElements.define('custom-footer', Footer);
+export { Footer };

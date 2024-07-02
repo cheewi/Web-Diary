@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diary Web Application</title>
-    <link rel="stylesheet" href="./src/style/font-family.css">
-    <link rel="stylesheet" href="./src/style/index.css">
-    <script src="./component/navBar.js" defer></script>
-    <script src="./component/footer.js" defer></script>
+    <link rel="stylesheet" href="./src/style/page-style/index.css">
+    <script src="./component/common-components/main.js" type="module"></script>
 </head>
 <body>
    <div class="container">
@@ -35,8 +33,8 @@
                         </p>
                     </div>
                     <div class="button-container">
-                        <button class="start-button">
-                            <a href="#" class="start-link">START</a>
+                        <button class="purple-button large">
+                            <a href="./pages/homepage.html" class="start-link">START</a>
                         </button>
                     </div>
                 </div>
@@ -44,7 +42,7 @@
         </section>
 
         <!-- FOOTER SECTION -->
-        <custom-footer custom-path="./"></custom-footer>
+       <custom-footer custom-path="./"></custom-footer>
    </div>
 
 </body>
