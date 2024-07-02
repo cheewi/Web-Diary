@@ -17,7 +17,7 @@ class sideBarComponent extends HTMLElement {
                 <div class="side-bar-page-container">
                     <div class="side-bar-page">
                         <div class="side-bar-page-icon-container">
-                            <img src="../asset/footer/black-cat-jumppng.png" alt="">
+                            <img src="../asset/homepage/svg/home.svg" alt="">
                         </div>
                         <h5 class="page-title">HOMEPAGE</h5>
                     </div>

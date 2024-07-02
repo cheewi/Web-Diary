@@ -91,8 +91,8 @@ body {
 
 @media (min-width: 430px) and (max-width : 1024px) { 
     .img-inner-container { 
-        max-width: 720px;
-        max-height: 720px;
+        max-width: 680px;
+        max-height: 680px;
     }
     .detail-heading { 
         font-size: var(--heading-base);

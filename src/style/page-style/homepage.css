@@ -9,23 +9,18 @@ body {
     flex-direction: column;
     height: 100vh;
 }
-.plus-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+
+.body-container {
+    display: flex;
+    width: 90%;
+    flex-grow: 1;
+    margin: var(--m-0) auto;
 }
 
 .cards-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-.body-container { 
-    display: flex;
-    margin-top: var(--m-13);
-    flex-grow: 1;
-    position: relative;
+    gap: 28px;
 }
 
 .cards-container { 
@@ -33,14 +28,13 @@ body {
 }
 
 .diary-container{ 
-    margin: var(--m-0) var(--m-12);
+    margin-left: var(--m-12);
     flex-grow: 1;
 }
 
 #hamburger { 
     height: 46px;
     cursor: pointer;
-    margin: var(--m-12) var(--m-0);
     background-color: var(--gray-white);
     border-radius: var(--br-3);
 }
@@ -58,7 +52,9 @@ body {
     }
     .body-container { 
         flex-direction: column;
-        margin: var(--m-0);
+    }
+    #hamburger {
+        margin: var(--m-12) var(--m-0);
     }
 }
 
@@ -71,7 +67,9 @@ body {
     }
     .body-container { 
         flex-direction: column;
-        margin: var(--m-0);
+    }
+    #hamburger {
+        margin: var(--m-13) var(--m-0);
     }
 }
 
@@ -81,6 +79,8 @@ body {
     }
     .body-container { 
         flex-direction: row;
+        margin: var(--m-13) auto;
+
     }
 }
 
@@ -90,5 +90,6 @@ body {
     }
     .body-container { 
         flex-direction: row;
+        margin: var(--m-13) auto;
     }
 }

@@ -50,6 +50,8 @@
     text-overflow: ellipsis;
     font-size: var(--sub-heading-md);
     cursor: pointer;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 .card-content-container { 
     height: 82px;

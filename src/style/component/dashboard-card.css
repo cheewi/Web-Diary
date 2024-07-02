@@ -1,15 +1,16 @@
 .dashboard-card {
-    width: 90%;
+    width: 100%;
     height: 56px;
     display: flex;
     align-items: center;
-    padding: var(--p-1);
+    padding: var(--p-1) var(--p-0);
     border: var(--border-st);
     border-radius: var(--br-5);
     box-shadow: var(--shadow-st);
     backdrop-filter: blur(10px);
     transition: 0.5s ease-in-out;
-    margin-bottom: var(--m-3);
+    margin-bottom: var(--m-6);
+    background-color: white;
 }
 
 .dashboard-card:hover {
