@@ -86,6 +86,11 @@
     background-color: transparent;
     width: var(--w-full);
     cursor: pointer;
+    height: var(--h-full);
+}
+
+#content-input 
+#edit-content-input { 
     white-space: pre-wrap;
     word-wrap: break-word;
 }
@@ -118,6 +123,11 @@ textarea {
     scrollbar-width: none; 
     overflow-y: auto;
     cursor: pointer;
+}
+
+#view-content { 
+    min-height: 280px;
+    max-height: 360px;
 }
 
 #view-content { 
