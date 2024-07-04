@@ -1,0 +1,107 @@
+/* Styling for common styles of the nav-bar */
+.nav-container { 
+    display: flex;
+    justify-content: center;
+    margin-top: var(--m-7);
+}
+
+.nav-inner-container { 
+    display: flex;
+    justify-content: space-between;
+    width: var(--w-full);
+}
+
+.logo-container { 
+    display: flex;
+    flex-direction: column;
+}
+.logo-link { 
+    text-decoration: none;
+}
+.logo-heading { 
+    font-family: Raleway;
+    font-weight: var(--fw-semibold);
+    margin: var(--m-0);
+    color: var(--primary-800);
+    letter-spacing: var(--spacing-md);
+}
+
+.logo-sub-heading {
+    font-family: Montserrat;
+    font-weight: var(--fw-normal);
+    margin: var(--m-0);
+    color: var(--primary-800);
+}
+
+.nav-right-container { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nav-left-container { 
+    cursor: pointer;
+}
+
+.about { 
+    font-family: Montserrat;
+    text-decoration: none;
+    color: var(--primary-800);
+    font-weight: var(--fw-normal);
+}
+
+.about:hover { 
+    text-decoration: underline;
+    font-weight: var(--fw-medium);
+}
+
+.purple-sub-heading { 
+    color: var(--secondary-400);
+}
+
+.nav-inner-container { 
+    margin: var(--m-0);
+    width: 90%;
+}
+
+
+/* Styling for responsiveness for the nav-bar */
+
+@media (max-width : 428px) { 
+    .logo-heading { 
+        font-size: var(--heding-sm);
+        letter-spacing:  var(--spacing-sm);
+    }
+    .logo-sub-heading { 
+        font-size: var(--text-sm);
+        margin-left: var(--m-7);
+    }
+    .about { 
+    font-size: var(--text-sm);
+    }
+}
+
+@media (min-width : 429px) and (max-width : 1024px) { 
+    .logo-heading { 
+        font-size: var(--heading-md);
+    }
+    .logo-sub-heading { 
+        font-size: var(--sub-heading-sm);
+        margin-left: var(--m-8);
+    }
+    .about { 
+        font-size: var(--sub-heading-sm);
+    }
+}
+
+@media (min-width : 1025px) { 
+    .logo-heading { 
+        font-size: var(--heading-lg);
+    }
+    .logo-sub-heading { 
+        font-size: var(--sub-heading-md);
+        margin-left: var(--m-9);
+    }
+    .about { 
+        font-size: var(--sub-heading-md);
+    }
+}

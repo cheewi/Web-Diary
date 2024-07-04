@@ -1,0 +1,95 @@
+@import url(./components.css);
+body { 
+    margin: var(--m-0);
+    padding: var(--p-0);
+}
+
+.homepage-container {  
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.body-container {
+    display: flex;
+    width: 90%;
+    flex-grow: 1;
+    margin: var(--m-0) auto;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.cards-container { 
+    display: grid;
+}
+
+.diary-container{ 
+    margin-left: var(--m-12);
+    flex-grow: 1;
+}
+
+#hamburger { 
+    height: 46px;
+    cursor: pointer;
+    background-color: var(--gray-white);
+    border-radius: var(--br-3);
+}
+
+#hamburger > img {
+    margin: var(--m-2);
+}
+
+@media (max-width : 490px) { 
+    .cards-container { 
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .diary-container { 
+        margin: var(--m-0);
+    }
+    .body-container { 
+        flex-direction: column;
+    }
+    #hamburger {
+        margin: var(--m-12) var(--m-0);
+    }
+}
+
+@media (min-width : 491px) and (max-width : 1024px) { 
+    .cards-container { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .diary-container { 
+        margin: var(--m-0);
+    }
+    .body-container { 
+        flex-direction: column;
+    }
+    #hamburger {
+        margin: var(--m-13) var(--m-0);
+    }
+}
+
+@media (min-width : 1025px) and (max-width : 1400px) { 
+    .cards-container { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .body-container { 
+        flex-direction: row;
+        margin: var(--m-13) auto;
+
+    }
+}
+
+@media (min-width : 1401px) { 
+    .cards-container { 
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .body-container { 
+        flex-direction: row;
+        margin: var(--m-13) auto;
+    }
+}
