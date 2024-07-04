@@ -86,6 +86,11 @@
     background-color: transparent;
     width: var(--w-full);
     cursor: pointer;
+    height: var(--h-full);
+}
+
+#content-input 
+#edit-content-input { 
     white-space: pre-wrap;
     word-wrap: break-word;
 }
@@ -118,6 +123,11 @@ textarea {
     scrollbar-width: none; 
     overflow-y: auto;
     cursor: pointer;
+}
+
+#view-content { 
+    min-height: 280px;
+    max-height: 360px;
 }
 
 #view-content { 
@@ -192,4 +202,12 @@ textarea {
         padding: var(--p-4-5);
     }
 }
+
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+
 

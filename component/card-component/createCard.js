@@ -7,22 +7,18 @@ class createCardComponent extends HTMLElement {
             <div class="modal" id="add-modal">
                 <div class="modal-content">
                     <span class="close" id="close-add-modal">&times;</span>
-
                     <div class="card-title-container-modal">
                         <h3 class="card-title-modal">ADD DIARY ENTRY</h3>
                     </div>
-
                     <div class="title-input-container">
-                        <input type="text" id="title-input" placeholder="Title">
+                        <input type="text" id="title-input" placeholder="Title" required>
                     </div>
-
                     <div class="content-input-container">
-                        <textarea id="content-input" placeholder="Content"></textarea>
+                        <textarea id="content-input" placeholder="Content" required></textarea>
                     </div>
-
                     <div class="modal-footer">
                         <div class="date-container">
-                            <input type="date" id="date-input">
+                            <input type="date" id="date-input" required>
                         </div>
                         <button class="purple-button small no-shadow" id="add-card-button">
                             ADD
@@ -30,6 +26,8 @@ class createCardComponent extends HTMLElement {
                     </div>
                 </div>
             </div>
+
+            <warning-modal></warning-modal>
         `;
     }
 }
@@ -38,7 +36,6 @@ class createCardComponent extends HTMLElement {
 customElements.define('create-card', createCardComponent);
 
 // Exporting this card with its parameters
-
 export function addCard(cards, saveCards, renderCards, titleInput, contentInput, dateInput, addModal, overlay) {
     // Retrieve input values and trim whitespace
     const title = titleInput.value.trim();
@@ -66,7 +63,26 @@ export function addCard(cards, saveCards, renderCards, titleInput, contentInput,
         overlay.style.display = "none";
         document.body.style.overflow = "auto"; // Re-enable background scrolling
     } else {
-        // Catch case for when not all the info is present
-        alert('All card content needs to be present');
+        // Display warning modal if any required field is missing
+        const warningModal = document.getElementById("warning-modal");
+        warningModal.style.display = "block";
+
+        // Disable closing add/edit modals while warning is open
+        addModal.querySelector('.close').style.pointerEvents = 'none';
+
+        // Close warning modal on clicking the close button
+        const closeWarningModalButton = document.getElementById("close-warning-modal");
+        closeWarningModalButton.onclick = () => {
+            warningModal.style.display = "none";
+            addModal.querySelector('.close').style.pointerEvents = 'auto';
+        };
+
+        // Close warning modal when clicking outside of it
+        window.onclick = (event) => {
+            if (event.target == warningModal) {
+                warningModal.style.display = "none";
+                addModal.querySelector('.close').style.pointerEvents = 'auto';
+            }
+        };
     }
 }

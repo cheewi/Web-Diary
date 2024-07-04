@@ -3,6 +3,8 @@ import { editCard, saveEdit } from './editCard.js';
 import { viewCard } from './viewCard.js';
 import { deleteCard } from './deleteCard.js';
 import { updateDashboard } from '../common-components/dashboard.js';
+import { warningModalComponent } from './warningModal.js';
+
 document.addEventListener("DOMContentLoaded", function() {
     // Grab the IDs for all the elements for creating the cards
     const titleInput = document.getElementById("title-input");
@@ -14,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const addModal = document.getElementById("add-modal");
     const openAddModal = document.getElementById("open-add-modal");
     const closeAddModal = document.getElementById("close-add-modal");
+
+    const warningModal = document.getElementById("warning-modal");
+    const closeWarningModal = document.getElementById("close-warning-modal");
 
     // Grab the IDs for all the elements for editing the cards
     const editModal = document.getElementById("edit-modal");
@@ -64,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <button onclick="viewCard(${index})" class="read-button">
                             <img src="../asset/homepage/svg/read.svg" alt="">
                         </button>
-                        <button onclick="editCard(${index})" class="read-button">
+                        <button onclick="editCard(${index})" class="edit-button">
                             <img src="../asset/homepage/svg/edit.svg" alt="">
                         </button>
                         <button onclick="deleteCard(${index})" class="delete-button">
@@ -80,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Edit card at the specified card index 
     window.editCard = function(index) {
-        currentEditIndex = index
+        currentEditIndex = index;
         editCard(cards, index, editTitleInput, editContentInput, editDateInput, editModal, overlay);
     };
 
@@ -91,9 +96,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // View card at the specified card
     window.viewCard = function(index) {
-        currentEditIndex = index
+        currentEditIndex = index;
         viewCard(cards, index, viewTitle, viewContent, viewDate, viewModal, overlay);
-    }
+    };
 
     // Watching the click event for the add card
     addCardButton.addEventListener("click", () => addCard(cards, saveCards, renderCards, titleInput, contentInput, dateInput, addModal, overlay));
@@ -107,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.style.overflow = "hidden"; 
     });
 
-
     closeAddModal.addEventListener("click", () => {
         // Toggle the display for the modal and the overlay
         addModal.style.display = "none";
@@ -115,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Re-enable background scrolling
         document.body.style.overflow = "auto"; 
     });
-    
+
     closeEditModal.addEventListener("click", () => {
         // Toggle the display for the modal and the overlay
         editModal.style.display = "none";
@@ -125,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     saveEditBtn.addEventListener("click", () => saveEdit(cards, currentEditIndex, saveCards, renderCards, editTitleInput, editContentInput, editDateInput, editModal, overlay));
-    
+
     closeViewModal.addEventListener("click", () => {
         // Toggle the display for the modal and the overlay
         viewModal.style.display = "none";
@@ -134,7 +138,15 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.style.overflow = "auto"; 
     });
 
+    closeWarningModal.addEventListener("click", () => {
+        warningModal.style.display = "none";
+    });
+
+    window.onclick = (event) => {
+        if (event.target == warningModal) {
+            warningModal.style.display = "none";
+        }
+    };
+
     renderCards();
 });
-
-
