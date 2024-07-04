@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <button onclick="viewCard(${index})" class="read-button">
                             <img src="../asset/homepage/svg/read.svg" alt="">
                         </button>
-                        <button onclick="editCard(${index})" class="read-button">
+                        <button onclick="editCard(${index})" class="edit-button">
                             <img src="../asset/homepage/svg/edit.svg" alt="">
                         </button>
                         <button onclick="deleteCard(${index})" class="delete-button">
