@@ -1,24 +1,19 @@
 class editCardComponent extends HTMLElement {
     connectedCallback() {
-
         // Html for the edit pop up modal
         this.innerHTML = `
         <div class="modal" id="edit-modal">
             <div class="modal-content">
                 <span class="close" id="close-edit-modal">&times;</span>
-
                 <div class="card-title-container-modal">
                     <h3 class="card-title-modal">EDIT DIARY ENTRY</h3>
                 </div>
-
                 <div class="title-input-container">
                     <input type="text" id="edit-title-input" placeholder="Title">
                 </div>
-
                 <div class="content-input-container">
-                    <textarea id="edit-content-input" placeholder="Content"></textarea>
+                    <textarea id="edit-content-input" placeholder="Content" required></textarea>
                 </div>
-        
                 <div class="modal-footer">
                     <div class="date-container">
                         <input type="date" id="edit-date-input">
@@ -37,7 +32,6 @@ customElements.define('edit-card', editCardComponent);
 
 // Export the function along with its parameters
 export function editCard(cards, index, editTitleInput, editContentInput, editDateInput, editModal, overlay) {
-
     // Giving the edit card the previous contents that it had
     editTitleInput.value = cards[index].title;
     editContentInput.value = cards[index].content;
@@ -65,7 +59,27 @@ export function saveEdit(cards, currentEditIndex, saveCards, renderCards, editTi
         editModal.style.display = "none";
         overlay.style.display = "none";
         document.body.style.overflow = "auto"; // Re-enable background scrolling
-    }
+    } else {
+        // Display warning modal if any required field is missing
+        const warningModal = document.getElementById("warning-modal");
+        warningModal.style.display = "block";
 
-    // Catch case for when not all the info is present 
+        // Disable closing add/edit modals while warning is open
+        editModal.querySelector('.close').style.pointerEvents = 'none';
+
+        // Close warning modal on clicking the close button
+        const closeWarningModalButton = document.getElementById("close-warning-modal");
+        closeWarningModalButton.onclick = () => {
+            warningModal.style.display = "none";
+            editModal.querySelector('.close').style.pointerEvents = 'auto';
+        };
+
+        // Close warning modal when clicking outside of it
+        window.onclick = (event) => {
+            if (event.target == warningModal) {
+                warningModal.style.display = "none";
+                editModal.querySelector('.close').style.pointerEvents = 'auto';
+            }
+        };
+    }
 }
