@@ -11,7 +11,7 @@ class NavBar extends HTMLElement {
                         <div class="logo-container">
                         <a href="../index.html" class="logo-link">
                             <h2 class="logo-heading">
-                                DIARY
+                                MEMOIR
                             </h2>
                             <p class="logo-sub-heading">
                                 A sense of 
