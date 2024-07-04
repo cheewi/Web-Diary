@@ -1,0 +1,21 @@
+
+
+#warning-modal { 
+    width: 50%;
+    z-index: 1001;
+}
+.warning-container {
+    text-align: center;
+}
+
+.warning-img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.warning-title {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: bold;
+}

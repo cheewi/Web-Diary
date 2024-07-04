@@ -5,7 +5,7 @@ const overlay = document.getElementById("overlay");
 console.log(hamburger)
 
 const sideBarResize = () => { 
-    if (window.innerWidth >= 1024) { 
+    if (window.innerWidth > 1024) { 
         sideBar.style.left = '0';
     }
     else { 

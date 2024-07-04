@@ -100,7 +100,7 @@ aside {
         margin-left: var(--m-1-5);
     }
 }
-@media  (min-width : 1024px) {
+@media  (min-width : 1025px) {
     aside{
         position: relative;
     }

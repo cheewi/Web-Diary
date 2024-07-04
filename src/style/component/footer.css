@@ -45,8 +45,8 @@
 
 /* Styling for the breakpoint */
 
-/* @media (min-width : 430px) and (max-width : 1024px) { 
+@media (max-width : 1024px) { 
     .footer-container { 
-        margin-top: 90px;
+        margin-top: var(--m-12);
     }
-} */
+}
