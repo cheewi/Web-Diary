@@ -27,11 +27,13 @@
     display: none;
 }
 
+/* Responsive design for the about page */
 @media (min-width : 648px) and (max-width : 1024px) { 
     .about-inner-container { 
         grid-template-columns: repeat(2, 1fr);
         margin-top: var(--m-16);
     }
+
     .no-display-1 { 
         display: flex;
     }

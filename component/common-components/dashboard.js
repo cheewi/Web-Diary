@@ -1,6 +1,8 @@
 // Define the dashboard card component
 class dashboardCardComponent extends HTMLElement {
     connectedCallback() {
+
+        // Code for dashbord card for the side bar
         this.setAttribute('class', 'dashboard-card');
         this.innerHTML = `
             <div class="dashboard-img-container">
@@ -22,11 +24,13 @@ customElements.define('dashboard-card', dashboardCardComponent);
 
 // Function to update the dashboard
 export function updateDashboard(cards) {
+    // Getting all the ids from the html for the cards and the container
     const totalCardsElement = document.querySelector("#total-cards .dashboard-content");
     const cardsThisWeekElement = document.querySelector("#cards-this-week .dashboard-content");
     const cardsThisMonthElement = document.querySelector("#cards-this-month .dashboard-content");
 
 
+    // Calculating the date for the cards
     const now = new Date();
     const startOfWeek = new Date(now.setDate(now.getDate() - now.getDay()));
     const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
@@ -34,6 +38,8 @@ export function updateDashboard(cards) {
     let totalCards = 0;
     let cardsThisWeek = 0;
     let cardsThisMonth = 0;
+
+    // Condition  for the cards amount
 
     cards.forEach(card => {
         const cardDate = new Date(card.timestamp);
@@ -46,9 +52,9 @@ export function updateDashboard(cards) {
         }
     });
 
-    totalCardsElement.textContent = `Total Diary Entries: ${totalCards}`;
     cardsThisWeekElement.textContent = `Diary Entries this week: ${cardsThisWeek}`;
     cardsThisMonthElement.textContent = `Diary Entries this month: ${cardsThisMonth}`;
+    totalCardsElement.textContent = `Total Diary Entries: ${totalCards}`;
 }
 
 

@@ -10,12 +10,16 @@
     <script src="../src/script/homepage.js" defer></script>
 </head>
 <body>
-    <!-- NAV-BAR SECTION -->
+    <!-- CONTAINER FOR PAGE -->
     <main class="homepage-container">
+
+        <!-- NAV-BAR SECTION -->
         <nav-bar custom-path=""></nav-bar>
-    
+        
+        <!-- CONTAINER STORING THE BODY CONTENT -->
         <section class="body-container">
             
+            <!-- SIDE BAR SECTION -->
             <div id="hamburger">
                 <img src="../asset/homepage/svg/hamburger.svg" alt="hamburger button">
             </div>
@@ -23,6 +27,7 @@
                 <side-bar></side-bar>
             </section>
 
+            <!-- SECTION CONTAINING ALL THE CARDS AND POP UP MODALS -->
             <section class="diary-container">
                 <div class="app-container">
                     <div class="cards-container" id="cards-container"></div>
@@ -32,11 +37,14 @@
                 <edit-card></edit-card>
                 <create-card></create-card>
             </section>
+
+            <!-- THE CREATE BUTTON -->
             <div class="plus-button-container">
                 <plus-button></plus-button>
             </div>
         </section>
 
+        <!-- FOOTER SECTION -->
         <custom-footer custom-path="../"></custom-footer>
     </main>
     

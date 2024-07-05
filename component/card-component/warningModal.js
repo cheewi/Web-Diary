@@ -4,6 +4,7 @@ class warningModalComponent extends HTMLElement {
     }
 
     connectedCallback() {
+        // HTML for pop up modal for warning
         this.innerHTML = `
             <div class="modal" id="warning-modal">
                 <div class="modal-content">
@@ -18,5 +19,6 @@ class warningModalComponent extends HTMLElement {
     }
 }
 
+// Definig the custom element
 customElements.define('warning-modal', warningModalComponent);
 export { warningModalComponent };

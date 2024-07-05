@@ -1,6 +1,7 @@
 class AboutSection extends HTMLElement {
     constructor() {
         super();
+        // Array for all the attributes of the component
         this.data = [
             {
                 title: 'ABOUT ME',
@@ -59,6 +60,8 @@ class AboutSection extends HTMLElement {
     }
 
     connectedCallback() {
+
+        // Html for the container of the about cards
         this.setAttribute('class', 'about-body-container')
         this.innerHTML = `
                 <div class="about-inner-container">
@@ -67,8 +70,11 @@ class AboutSection extends HTMLElement {
         `;
     }
 
+    // Parameters of the render card function (the parameters are the attributes in the array)
+
     renderCard({ title, img, info, signoff, imgAlt, cardClass, imgClass1, imgClass2, textALign }) {
         if (title) {
+            // Condition for card with texts
             return `
                 <div class="about-card ${cardClass}">
                     <div class="about-card-container ${textALign}">
@@ -89,7 +95,10 @@ class AboutSection extends HTMLElement {
                     </div>
                 </div>
             `;
-        } else {
+        } 
+
+        // Condition for cards with image only
+        else {
             return `
                 <div class="about-card ${cardClass}">
                     <img src="${img}" alt="${imgAlt}" class="about-img">
@@ -99,5 +108,6 @@ class AboutSection extends HTMLElement {
     }
 }
 
+// Defining the custom element
 customElements.define('about-section', AboutSection);
 export { AboutSection };

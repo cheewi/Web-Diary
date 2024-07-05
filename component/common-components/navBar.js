@@ -2,8 +2,9 @@ class NavBar extends HTMLElement {
     constructor() {
         super();
     }
-
+    // Custom nav-bar element
     connectedCallback() {
+        // Takes only one attribute which specifies the path directory
         const customPath = this.getAttribute('custom-path')
         this.innerHTML = `
             <nav class="nav-container">
