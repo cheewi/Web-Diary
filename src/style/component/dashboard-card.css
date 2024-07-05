@@ -1,6 +1,6 @@
 .dashboard-card {
     width: 100%;
-    height: 56px;
+    height: 72px;
     display: flex;
     align-items: center;
     padding: var(--p-1) var(--p-0);
@@ -30,6 +30,9 @@
 
 /* Title section of the card */
 
+.dashboard-container-title { 
+    margin-bottom: var(--m-2);
+}
 .dashboard-title {
     font-family: RaleWay;
     font-size: var(--sub-heading-md);
