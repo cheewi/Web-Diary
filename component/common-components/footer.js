@@ -2,8 +2,9 @@ class Footer extends HTMLElement {
     constructor() {
         super();
     }
-
+    // Custom footer 
     connectedCallback() {
+        // The footer has just one attribute that specifies the path directory
         const customPath = this.getAttribute('custom-path')
         this.innerHTML = `
             <footer class="footer-container">

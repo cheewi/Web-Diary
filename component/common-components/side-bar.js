@@ -1,7 +1,7 @@
 class sideBarComponent extends HTMLElement {
     connectedCallback() {
 
-        // Html for the edit pop up modal
+        // Html for the side bar component
         this.innerHTML = `
             <aside class="side-bar" id="side-bar">
                 <span class="close" id="side-bar-close">&times;</span>
@@ -35,6 +35,6 @@ class sideBarComponent extends HTMLElement {
         `;
     }
 }
-// Defining the card modal 
+// Defining the side bar modal
 customElements.define('side-bar', sideBarComponent);
 export {sideBarComponent}

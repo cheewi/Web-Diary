@@ -13,6 +13,7 @@
     background-color: white;
 }
 
+/* Image sectiin of the card */
 .dashboard-card:hover {
     cursor: pointer;
     transform: scale(1.05);
@@ -23,6 +24,12 @@
     height: 60px;
 }
 
+.dashboard-img { 
+    height: var(--h-full);
+}
+
+/* Title section of the card */
+
 .dashboard-title {
     font-family: RaleWay;
     font-size: var(--sub-heading-md);
@@ -32,6 +39,7 @@
     margin-bottom: var(--m-1);
 }
 
+/* Content section of the card */
 .dashboard-content {
     color: var(--black);
     font-size: var(--text-sm);
@@ -39,6 +47,3 @@
     margin: var(--m-0);
 }
 
-.dashboard-img { 
-    height: var(--h-full);
-}

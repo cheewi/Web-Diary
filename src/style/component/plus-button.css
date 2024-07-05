@@ -1,3 +1,4 @@
+/* Button styling */
 .plus-button-container { 
 	position: fixed;
 	bottom: 5%;
@@ -51,21 +52,26 @@
 	transform: rotate(180deg);
 }
 
+/* Responsive design for the button */
 @media (max-width : 429px) { 
 	.plus-button { 
 		width: var(--mob-sl);
 		height: var(--mob-sl);
 	}
+
 	.plus-button::before { 
 		border-width: 0 var(--mob-trsl) var(--mob-trsl) 0;
 	}
+
 	.plus-button:hover::before {
 		--mob-trsl : calc(var(--mob-sl) * 2);
 	}
+
 	
 	.plus-button:focus-visible::before {
 		--mob-trsl : calc(var(--mob-sl) * 2);
 	}
+
 	.plus-button>.plus-icon { 
 		width: calc(var(--mob-sl) * 0.7);
 		height: calc(var(--mob-sl) * 0.7);
@@ -77,9 +83,11 @@
 		width: var(--tab-sl);
 		height: var(--tab-sl);
 	}
+
 	.plus-button::before { 
 		border-width: 0 var(--tab-trsl) var(--tab-trsl) 0;
 	}
+
 	.plus-button:hover::before {
 		--tab-trsl : calc(var(--tab-sl) * 2);
 	}
@@ -87,6 +95,7 @@
 	.plus-button:focus-visible::before {
 		--tab-trsl : calc(var(--tab-sl) * 2);
 	}
+
 	.plus-button>.plus-icon { 
 		width: calc(var(--tab-sl) * 0.7);
 		height: calc(var(--tab-sl) * 0.7);
@@ -98,16 +107,20 @@
 		width: var(--des-sl);
 		height: var(--des-sl);
 	}
+
 	.plus-button::before { 
 		border-width: 0 var(--des-trsl) var(--des-trsl) 0;
 	}
+
 	.plus-button:hover::before {
 		--des-trsl : calc(var(--des-sl) * 2);
 	}
+
 	
 	.plus-button:focus-visible::before {
 		--des-trsl : calc(var(--des-sl) * 2);
 	}
+
 	.plus-button>.plus-icon { 
 		width: calc(var(--des-sl) * 0.7);
 		height: calc(var(--des-sl) * 0.7);

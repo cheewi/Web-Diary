@@ -2,8 +2,10 @@ class NavBar extends HTMLElement {
     constructor() {
         super();
     }
-
+    // Custom nav-bar element
     connectedCallback() {
+        // Takes only one attribute which specifies the path directory
+        const customPath = this.getAttribute('custom-path')
         this.innerHTML = `
             <nav class="nav-container">
                 <div class="nav-inner-container">
@@ -11,7 +13,7 @@ class NavBar extends HTMLElement {
                         <div class="logo-container">
                         <a href="../index.html" class="logo-link">
                             <h2 class="logo-heading">
-                                DIARY
+                                MEMOIR
                             </h2>
                             <p class="logo-sub-heading">
                                 A sense of 
@@ -23,7 +25,7 @@ class NavBar extends HTMLElement {
                         </div>
                     </div>
                     <div class="nav-right-container">
-                        <a href="#" class="about">ABOUT</a>
+                        <a href="${customPath}about.html" class="about">ABOUT</a>
                     </div>
                 </div>
             </nav>

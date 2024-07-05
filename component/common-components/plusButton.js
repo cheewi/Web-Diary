@@ -3,6 +3,7 @@ class plusButton extends HTMLElement {
         super();
     }
     connectedCallback() {
+        // Plus button for creating the cards 
         this.setAttribute('class', 'plus-button');
         this.setAttribute('id', 'open-add-modal')
         this.innerHTML = `
