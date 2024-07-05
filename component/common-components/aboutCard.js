@@ -4,7 +4,7 @@ class AboutSection extends HTMLElement {
         this.data = [
             {
                 title: 'ABOUT ME',
-                img: '../asset/about/cat-poof-removebg-preview (1).png',
+                img: '../asset/about/cat-poof.png',
                 info: `Hello, My name is Van Sochetta, I am an 18-year-old. With no prior coding experience, I embarked on this journey to create a <span class="purple-span">Web Diary Application</span> purely out of passion(and per the requirement). This project has been a significant part of my personal growth, allowing me to explore and expand.`,
                 signoff: `Re-tell your Story through <span class="purple-span">Memoir!</span>`,
                 imgAlt: 'Profile Picture',
@@ -35,7 +35,7 @@ class AboutSection extends HTMLElement {
             },
             {
                 title: 'ABOUT MEMOIR',
-                img: '../asset/about/cat-stare-removebg-preview (1).png',
+                img: '../asset/about/cat-stare.png',
                 info: `Memoir is a Web-based Diary application designed to help you capture your <span class="purple-span">life's stories and memories.</span> It was built from the ground up using <span class="purple-span">vanilla</span> JavaScript, HTML, and CSS. This approach allows for a lightweight and efficient application that prioritizes speed and ease of use.`,
                 signoff: `Jot down the <span class="purple-span">highlights of your day</span> from significant events to fleeting moments with <span class="purple-span">Memoir!</span>`,
                 imgAlt: 'Memoir Description Image',

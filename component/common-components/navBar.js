@@ -4,6 +4,7 @@ class NavBar extends HTMLElement {
     }
 
     connectedCallback() {
+        const customPath = this.getAttribute('custom-path')
         this.innerHTML = `
             <nav class="nav-container">
                 <div class="nav-inner-container">
@@ -23,7 +24,7 @@ class NavBar extends HTMLElement {
                         </div>
                     </div>
                     <div class="nav-right-container">
-                        <a href="#" class="about">ABOUT</a>
+                        <a href="${customPath}about.html" class="about">ABOUT</a>
                     </div>
                 </div>
             </nav>
