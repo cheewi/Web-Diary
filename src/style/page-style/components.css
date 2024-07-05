@@ -7,6 +7,7 @@
 @import url(../component/dashboard-card.css);
 @import url(../component/side-bar.css);
 @import url(../component/warning-modal.css);
+@import url(../component/about-card.css);
 
 @import url(../root-style/colors.css);
 @import url(../root-style/font-family.css);
@@ -15,3 +16,9 @@
 @import url(../root-style/measurement.css);
 @import url(../root-style/text.css);
 @import url(../root-style/border-shadow.css);
+
+* { 
+    margin: var(--m-0);
+    padding: var(--m-0);
+    box-sizing: border-box;
+}

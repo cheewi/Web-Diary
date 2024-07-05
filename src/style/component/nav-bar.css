@@ -38,6 +38,7 @@
     flex-direction: column;
     justify-content: center;
 }
+
 .nav-left-container { 
     cursor: pointer;
 }
@@ -71,10 +72,12 @@
         font-size: var(--heding-sm);
         letter-spacing:  var(--spacing-sm);
     }
+
     .logo-sub-heading { 
         font-size: var(--text-sm);
         margin-left: var(--m-7);
     }
+
     .about { 
     font-size: var(--text-sm);
     }
@@ -84,10 +87,12 @@
     .logo-heading { 
         font-size: var(--heading-md);
     }
+
     .logo-sub-heading { 
         font-size: var(--sub-heading-sm);
         margin-left: var(--m-8);
     }
+
     .about { 
         font-size: var(--sub-heading-sm);
     }
@@ -97,10 +102,12 @@
     .logo-heading { 
         font-size: var(--heading-lg);
     }
+
     .logo-sub-heading { 
         font-size: var(--sub-heading-md);
         margin-left: var(--m-9);
     }
+    
     .about { 
         font-size: var(--sub-heading-md);
     }
