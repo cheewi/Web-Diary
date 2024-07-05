@@ -166,6 +166,7 @@ textarea {
 }
 
 .date-container { 
+    min-width: 150px;
     border: 2px solid var(--secondary-400);
     padding: var(--p-2);
     border-radius: var(--br-3);
@@ -179,6 +180,12 @@ textarea {
     background-color: transparent;
     font-size: var(--sub-heading-sm);
     width: var(--w-full);
+}
+
+#view-date { 
+    min-height: 32px;
+    display: flex;
+    align-items: center;
 }
 
 ::-webkit-calendar-picker-indicator {
